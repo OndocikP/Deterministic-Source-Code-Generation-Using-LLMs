@@ -1,0 +1,12 @@
+models=Gemini_gemini-3.1-flash-lite,Gemini_gemini-3.1-flash,Ollama_qwen2.5-coder:14b,Ollama_gemma4:e4b,Ollama_qwen3:8b,Ollama_qwen3.5:9b
+language=Python
+num_generations=50
+temperature=0
+top_p=1
+top_k=40
+seed=0
+think=false
+max_output_tokens=5000
+frequency_penalty=0.0
+presence_penalty=0.0
+num_ctx=4096

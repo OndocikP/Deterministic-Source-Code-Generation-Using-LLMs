@@ -1,0 +1,4 @@
+models=Gemini_gemini-3.1-flash-lite,Gemini_gemini-3.1-flash,Ollama_qwen2.5-coder:7b,Ollama_gemma4:e4b,Ollama_qwen3.5:9b,Ollama_qwen2.5-coder:14b,Ollama_qwen3:8b,
+language=Python
+num_generations=5
+skip=False

@@ -1,0 +1,16 @@
+function=is_even
+2=True
+7=False
+0=True
+-4=True
+-3=False
+100=True
+1=False
+10=True
+15=False
+22=True
+99=False
+-10=True
+-7=False
+-1=False
+-2=True

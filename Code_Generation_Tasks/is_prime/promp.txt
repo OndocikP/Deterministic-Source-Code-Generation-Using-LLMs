@@ -1,0 +1,19 @@
+Implement a function with the following signature:
+
+`def is_prime(number: int) -> bool:`
+
+The function must return `True` if the given integer is a prime number and `False` otherwise.
+
+Requirements:
+- A prime number is an integer greater than 1 that has exactly two positive divisors: 1 and itself.
+- Numbers less than or equal to 1 are not prime.
+- Handle positive integers, zero, and negative integers correctly.
+- Handle even and odd numbers correctly.
+- The function must work for both small and large integers.
+- Use an efficient algorithm. Do not check every integer up to the input number; checking divisors up to the square root of the number is sufficient.
+- Do not hardcode specific inputs or expected outputs.
+- Do not use external libraries.
+- Return a boolean value.
+- Do not print anything.
+- Implement only the requested function and any essential helper functions.
+- Return only the complete source code in the target programming language, without Markdown code fences or explanations.

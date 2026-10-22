@@ -1,0 +1,13 @@
+Implement a function with the following signature:
+
+`def is_even(number: int) -> bool:`
+
+The function must return `True` if the given integer is even and `False` if it is odd.
+
+Requirements:
+- Handle positive numbers, negative numbers, and zero.
+- Return a boolean value.
+- Do not print anything.
+- Do not use external libraries.
+- Implement the function without hardcoding specific inputs.
+- Return only the complete source code in the target programming language.

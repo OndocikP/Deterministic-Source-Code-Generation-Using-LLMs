@@ -1,0 +1,51 @@
+Create a robust Python implementation of a mathematical calculator.
+
+### Required public API
+
+Implement exactly this function:
+
+`calculate(expression: str) -> float`
+
+The function accepts a mathematical expression as a string and returns the computed result as `float`.
+
+### Supported syntax
+
+The expression may contain:
+
+* numbers (integers and decimals, e.g. `2`, `2.5`, `0.125`)
+* operators: `+`, `-`, `*`, `/`
+* parentheses: `(` and `)`
+* arbitrary whitespace (must be ignored)
+
+### Behavioral requirements
+
+* Respect standard precedence:
+  1. parentheses
+  2. multiplication/division
+  3. addition/subtraction
+* For operators with same precedence, evaluate left-to-right.
+* Return all results as `float` (e.g. `3` should return `3.0`).
+* Raise `ZeroDivisionError` for division by zero.
+* Raise `ValueError` for malformed expressions (invalid character, unbalanced parentheses, missing operand, etc.).
+* Do **not** use `eval`, `exec`, `ast.literal_eval`, `numexpr`, or similar code-execution shortcuts.
+
+### Implementation constraints (important)
+
+* Implement a deterministic parser (e.g. shunting-yard + RPN evaluation, or recursive descent).
+* Tokenization must preserve operators and numbers correctly.
+* If using regular expressions, avoid capturing-group mistakes that can produce empty tokens.
+* Ensure parser functions are called with correct arguments consistently.
+* Validate that the whole input is consumed; leftover tokens must raise `ValueError`.
+
+### Minimum examples that must work
+
+* `calculate("1+1") == 2.0`
+* `calculate("2+3*4") == 14.0`
+* `calculate("(1+2)*3") == 9.0`
+* `calculate("1/8") == 0.125`
+* `calculate("30/(2+3)+4") == 10.0`
+* `calculate(" 5 + 2 * 6 ") == 17.0`
+
+### Output format
+
+Output only valid Python code, no markdown, no explanations, no comments.

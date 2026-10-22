@@ -1,0 +1,17 @@
+# Ignore environment and notes files
+.env
+poznamky.txt
+
+# Ignore Python cache folders everywhere
+__pycache__/
+**/__pycache__/
+
+# In Code_Generation_Tasks and all its subfolders,
+# ignore all files except .txt and .csv
+/Code_Generation_Tasks/**/*
+!/Code_Generation_Tasks/**/*.txt
+!/Code_Generation_Tasks/**/*.csv
+
+# Keep directories accessible so Git can find allowed files
+!/Code_Generation_Tasks/
+!/Code_Generation_Tasks/**/

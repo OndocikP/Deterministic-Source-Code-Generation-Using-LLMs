@@ -1,0 +1,61 @@
+Create an implementation of a mathematical calculator.
+
+### Function
+
+Implement the function:
+
+`calcute(string)`
+
+The function accepts a mathematical expression as a string and returns its result as a `float`.
+
+### Supported Operations
+
+The function must support:
+
+* `+` — addition
+* `-` — subtraction
+* `*` — multiplication
+* `/` — division
+* `(` `)` — parentheses
+
+### Operator Precedence
+
+The expression must be evaluated according to standard mathematical operator precedence:
+
+1. Innermost parentheses
+2. Multiplication and division
+3. Addition and subtraction
+
+Operators with the same precedence must be evaluated from left to right.
+
+Example:
+
+`2 + 3 * 4`
+
+must return:
+
+`14`
+
+not `20`.
+
+Example:
+
+`2 * (1 + 3) / 4`
+
+must return:
+
+`2.0`
+
+### Additional Requirements
+
+* Support decimal numbers, such as `2.5`, `0.75`, and `10.25`.
+* Support nested parentheses, such as `2*(3+(4*5))`.
+* Ignore whitespace in the input expression.
+* The result must be of type `float`.
+* Raise an appropriate error for invalid expressions.
+* Raise an appropriate error when division by zero occurs.
+* Do not use `eval()` or any equivalent function to directly execute the input as code.
+* Implement your own parser or algorithm for processing mathematical expressions.
+* The solution must correctly handle operator precedence and parentheses.
+
+**Output only the code, without any comments or additional explanations.**

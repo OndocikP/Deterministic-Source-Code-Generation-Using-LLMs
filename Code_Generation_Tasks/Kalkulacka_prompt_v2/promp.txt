@@ -1,0 +1,118 @@
+Implement a complete, working calculator function in the target programming language with the following interface:
+
+`def calculate(expression: str) -> float:`
+
+## Objective
+
+Create a calculator that evaluates mathematical expressions containing the four basic arithmetic operators and parentheses. The implementation must correctly follow standard mathematical operator precedence and return the numerical result as a floating-point value.
+
+## Functional Requirements
+
+1. **Addition (`+`)** — Add two numbers.
+2. **Subtraction (`-`)** — Subtract the right operand from the left operand.
+3. **Multiplication (`*`)** — Multiply two numbers.
+4. **Division (`/`)** — Divide the left operand by the right operand.
+5. **Parentheses (`(` and `)`)** — Evaluate expressions inside parentheses before applying operations outside them. Support nested parentheses.
+6. **Operator precedence** — Multiplication and division must have higher precedence than addition and subtraction.
+7. **Left-to-right evaluation** — Operators with equal precedence must be evaluated from left to right.
+8. **Decimal results** — Support fractional results without rounding or truncating them unnecessarily.
+9. **Numeric literals** — Support integer and decimal numbers, including expressions such as `1/8`, `5/2`, and `7/4`.
+10. **Whitespace** — Ignore leading, trailing, and internal whitespace between tokens.
+11. **Input validation** — Handle malformed expressions and division by zero explicitly, using appropriate exceptions supported by the target language. Do not silently return an incorrect result.
+
+## Implementation Requirements
+
+- Implement the requested function with the exact name and parameter signature: `calculate(expression: str) -> float`.
+- Use a proper expression parser, such as recursive descent, or another reliable parsing algorithm that correctly implements the specified grammar and operator precedence.
+- Do not use `eval()`, `exec()`, or equivalent mechanisms that execute the input as source code.
+- Do not use external dependencies unless they are explicitly required.
+- Do not hardcode the results of the provided test cases.
+- Do not implement the calculator as a collection of special cases or string replacements.
+- Ensure the function works for arbitrary valid expressions within the specified grammar, not just the examples below.
+- Return a numeric floating-point result, not a formatted string.
+- Keep the implementation self-contained and compatible with the target programming language.
+- Do not add an interactive command-line interface, input prompts, demonstration output, or unrelated functionality.
+- Include only the code necessary to implement the requested function and any essential helper functions.
+
+## Expression Grammar
+
+The calculator must support the following grammar:
+
+- `expression` = `term` followed by zero or more `+ term` or `- term` operations.
+- `term` = `factor` followed by zero or more `* factor` or `/ factor` operations.
+- `factor` = a numeric literal or a parenthesized expression.
+
+This grammar ensures that multiplication and division take precedence over addition and subtraction, while operations of equal precedence are evaluated from left to right.
+
+If the target language and requirements support it, also handle unary plus and unary minus, including expressions such as `-5`, `+3`, `-(2+3)`, and `2*-3`, without breaking the required operator precedence.
+
+## Required Behavioral Tests
+
+The implementation must correctly evaluate all the following expressions. Each expected result is the exact mathematical value; floating-point comparisons should use a suitable tolerance when necessary.
+
+Basic arithmetic:
+
+- `18-9` → `9`
+- `2*4` → `8`
+- `3*5` → `15`
+- `6*7` → `42`
+- `8*8` → `64`
+- `9*4` → `36`
+- `9/3` → `3`
+- `12/4` → `3`
+- `20/5` → `4`
+- `36/6` → `6`
+
+Operator precedence:
+
+- `10-2*3` → `4`
+- `20-4*2` → `12`
+- `2*3+4` → `10`
+- `5*4-6` → `14`
+- `18/3+2` → `8`
+- `20/5+7` → `11`
+- `16-12/4` → `13`
+- `2+12/3` → `6`
+- `30-20/5` → `26`
+- `4*5+3` → `23`
+- `7+8/2` → `11`
+- `6*6-10` → `26`
+- `3+4*2-5` → `6`
+- `30-4*5+6` → `16`
+
+Parentheses:
+
+- `(1+2)*3` → `9`
+- `(2+3)*(4+1)` → `25`
+- `(8-2)*(6-3)` → `18`
+- `(10+5)/(2+3)` → `3`
+- `(12-4)/(2+2)` → `2`
+- `(3+5)*(7-4)` → `24`
+- `(20-8)/(2*3)` → `2`
+- `(4+6)/(8-6)` → `5`
+- `(9-3)*(2+4)` → `36`
+- `(5+7)/(2+1)` → `4`
+- `(18-6)/(2+4)` → `2`
+- `(2+3)*4/(6-1)` → `4`
+
+Fractional results:
+
+- `1/8` → `0.125`
+- `5/2` → `2.5`
+- `1/4` → `0.25`
+- `7/4` → `1.75`
+- `2/8` → `0.25`
+- `5/8` → `0.625`
+- `3/8` → `0.375`
+- `9/4` → `2.25`
+- `1/20` → `0.05`
+- `3/20` → `0.15`
+- `7/20` → `0.35`
+
+## Output Requirements
+
+Return only the complete source code in the specified target programming language.
+
+Do not include explanations, comments outside the code, Markdown formatting, Markdown code fences, test output, or any text before or after the code.
+
+The final implementation must be correct, robust, and ready to execute or integrate into an existing application.
