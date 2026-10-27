@@ -1,0 +1,23 @@
+Write a Python function named `is_valid_email` that validates an email address.
+
+Requirements:
+
+1. The function must accept a single argument named `email`.
+2. The function must return `True` if the input is a valid email address according to the validation rules you implement, otherwise return `False`.
+3. The function must return a Boolean value (`bool`) in every case.
+4. If the input is not a string, including `None`, integers, lists, or other data types, the function must return `False` without raising an exception.
+5. Reject empty strings and strings containing leading or trailing whitespace. Do not silently strip or normalize the input.
+6. Validate the email structure, including the local part, the `@` symbol, and the domain.
+7. Reject addresses with missing local parts or domains, multiple `@` symbols, consecutive dots in the local part, invalid domain labels, or domain labels that start or end with a hyphen.
+8. Do not accept spaces or control characters anywhere in the email address.
+9. Use only Python's standard library. Do not install or import third-party packages.
+10. Include appropriate type hints and a concise docstring.
+11. Do not perform DNS lookups or check whether the email address actually exists.
+12. The implementation must be deterministic: the same input must always produce the same Boolean result.
+
+Output requirements:
+
+- Return only the complete Python source code.
+- Do not include Markdown formatting, code fences, explanations, or any text outside the code.
+- Do not include example usage or unit tests.
+- Ensure the code is syntactically valid and can run on Python 3.10 or later.

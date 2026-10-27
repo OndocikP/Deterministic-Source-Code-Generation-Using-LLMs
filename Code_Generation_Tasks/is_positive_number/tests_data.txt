@@ -1,0 +1,6 @@
+function=is_positive_number
+5=True
+0=False
+-2=False
+3.14=True
+-0.1=False

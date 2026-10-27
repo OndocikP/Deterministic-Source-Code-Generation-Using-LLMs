@@ -65,7 +65,36 @@ def _serialize_ast(source_code):
         tree = ast.parse(source_code)
     except SyntaxError:
         return None
-    return ast.dump(tree, include_attributes=False)
+    identifier_map = {}
+
+    class _IdentifierNormalizer(ast.NodeTransformer):
+        def _normalize(self, name):
+            if name not in identifier_map:
+                identifier_map[name] = f"id_{len(identifier_map)}"
+            return identifier_map[name]
+
+        def visit_Name(self, node):
+            node.id = self._normalize(node.id)
+            return self.generic_visit(node)
+
+        def visit_arg(self, node):
+            node.arg = self._normalize(node.arg)
+            return self.generic_visit(node)
+
+        def visit_FunctionDef(self, node):
+            node.name = self._normalize(node.name)
+            return self.generic_visit(node)
+
+        def visit_AsyncFunctionDef(self, node):
+            node.name = self._normalize(node.name)
+            return self.generic_visit(node)
+
+        def visit_ClassDef(self, node):
+            node.name = self._normalize(node.name)
+            return self.generic_visit(node)
+
+    normalized_tree = _IdentifierNormalizer().visit(tree)
+    return ast.dump(normalized_tree, include_attributes=False)
 
 
 def _is_correct_result(actual, expected):

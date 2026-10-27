@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="60">
+  <title>Code Generation · Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-box">
+        <div class="brand-mark">CG</div>
+        <div>
+          <div class="brand-name">Code Generation</div>
+          <div class="brand-subtitle">Dashboard</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-item active" href="/">Home</a>
+        <a class="nav-item" href="/reporti">Reporti</a>
+      </nav>
+
+      <div class="menu-section">
+        <div class="menu-label">Doplnky</div>
+        <button class="nav-button" type="button" data-run="main">Spustiť · main</button>
+        <button class="nav-button" type="button" data-run="remove_csv">Spustiť · remove_csv</button>
+        <button class="nav-button" type="button" data-run="report">Spustiť · report</button>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <div class="topline">
+        <div>
+          <div class="eyebrow">Prehľad</div>
+          <h1>Výsledky <span>generovania kódu.</span></h1>
+        </div>
+        <div class="pill">Lokálny dashboard · automatické obnovenie každých 60 s</div>
+      </div>
+
+      <div class="stats">
+        __SUMMARY_CARDS__
+      </div>
+
+      __MODEL_SUMMARY__
+      __EMPTY_MESSAGE__
+    </main>
+  </div>
+
+  <div id="run-dialog" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Spúšťanie skriptu</h3>
+        <button type="button" class="close-dialog" aria-label="Zavrieť">×</button>
+      </div>
+      <pre id="run-output" class="terminal-output"></pre>
+      <div class="dialog-actions">
+        <button id="close-run-dialog" type="button" class="secondary">Zavrieť</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

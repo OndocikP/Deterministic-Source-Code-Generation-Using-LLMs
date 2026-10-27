@@ -1,0 +1,6 @@
+function=count_vowels
+hello=2
+sky=0
+AEIOU=5
+Alphabet=3
+Deterministic=5

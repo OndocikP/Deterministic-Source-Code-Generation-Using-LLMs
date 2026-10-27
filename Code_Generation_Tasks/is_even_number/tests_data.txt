@@ -1,0 +1,6 @@
+function=is_even_number
+2=True
+3=False
+0=True
+-4=True
+11=False

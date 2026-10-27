@@ -1,0 +1,6 @@
+function=to_uppercase
+hello=HELLO
+PyThOn=PYTHON
+abc123=ABC123
+slovensko=SLOVENSKO
+chat gpt=CHAT GPT

@@ -1,0 +1,6 @@
+function=string_length
+hello=5
+Python=6
+a=1
+OpenAI=6
+test case=9

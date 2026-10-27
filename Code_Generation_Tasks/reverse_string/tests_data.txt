@@ -1,0 +1,6 @@
+function=reverse_string
+hello=olleh
+Python=nohtyP
+abc123=321cba
+racecar=racecar
+slovakia=aikavols

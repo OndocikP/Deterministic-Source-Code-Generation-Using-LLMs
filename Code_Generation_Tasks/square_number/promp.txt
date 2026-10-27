@@ -1,0 +1,17 @@
+Write a Python function named `square_number` that returns the square of the input number.
+
+Requirements:
+
+1. The function must accept a single argument named `value`.
+2. The function must implement this behavior exactly: returns the square of the input number.
+3. Accept integers and floats. If input is not a number, return None.
+4. The implementation must be deterministic.
+5. Use only Python standard library.
+6. Include type hints and a concise docstring.
+
+Output requirements:
+
+- Return only the complete Python source code.
+- Do not include Markdown formatting, code fences, explanations, or extra text.
+- Do not include tests or example usage.
+- Ensure compatibility with Python 3.10 or later.

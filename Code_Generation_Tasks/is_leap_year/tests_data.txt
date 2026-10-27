@@ -1,0 +1,6 @@
+function=is_leap_year
+2000=True
+1900=False
+2024=True
+2023=False
+2400=True

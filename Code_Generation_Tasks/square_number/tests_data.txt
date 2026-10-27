@@ -1,0 +1,6 @@
+function=square_number
+2=4
+-3=9
+0=0
+1.5=2.25
+10=100
