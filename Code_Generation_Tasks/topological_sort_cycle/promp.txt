@@ -1,0 +1,16 @@
+Implement a function with the following signature:
+
+`def topological_order(graph: dict[str, list[str]]) -> list[str] | None:`
+
+The function must return a topological ordering for a directed graph, or `None` if the graph contains a cycle.
+
+Requirements:
+- Use Kahn's algorithm (in-degree based).
+- Include nodes that appear only in adjacency lists.
+- If multiple nodes have zero in-degree at the same time, always choose the lexicographically smallest node first.
+- Return `None` when a cycle exists.
+- Do not mutate the input graph.
+- Do not print anything.
+- Do not use external libraries.
+- Return only the complete source code in the target programming language, without Markdown code fences or explanations.
+

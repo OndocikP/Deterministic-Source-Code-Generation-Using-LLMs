@@ -1,0 +1,12 @@
+function=lcs_length
+('AGGTAB', 'GXTXAYB')=4
+('ABCBDAB', 'BDCABA')=4
+('XMJYAUZ', 'MZJAWXU')=4
+('aaaa', 'aa')=2
+('abcdef', 'fedcba')=1
+('', 'abc')=0
+('dynamicprogramming', 'randomsampling')=7
+('kitten', 'sitting')=4
+('longestcommonsubsequence', 'stonecutters')=7
+('abracadabra', 'avada kedavra')=7
+

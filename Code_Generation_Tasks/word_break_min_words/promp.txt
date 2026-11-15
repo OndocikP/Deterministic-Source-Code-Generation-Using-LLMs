@@ -1,0 +1,15 @@
+Implement a function with the following signature:
+
+`def min_word_break(text: str, dictionary: list[str]) -> int:`
+
+The function must split `text` into dictionary words using the minimum number of words.
+
+Requirements:
+- Return the minimum number of words needed to build the full text.
+- Return `-1` if no valid full segmentation exists.
+- Use dynamic programming.
+- Dictionary matching is case-sensitive.
+- Do not print anything.
+- Do not use external libraries.
+- Return only the complete source code in the target programming language, without Markdown code fences or explanations.
+

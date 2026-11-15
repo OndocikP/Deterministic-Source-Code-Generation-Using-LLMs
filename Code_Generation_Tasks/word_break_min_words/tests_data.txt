@@ -1,0 +1,12 @@
+function=min_word_break
+('leetcode', ['leet', 'code'])=2
+('applepenapple', ['apple', 'pen'])=3
+('catsanddog', ['cat', 'cats', 'and', 'sand', 'dog'])=3
+('catsandog', ['cats', 'dog', 'sand', 'and', 'cat'])=-1
+('pineapplepenapple', ['apple', 'pen', 'applepen', 'pine', 'pineapple'])=3
+('aaaaaaa', ['aaaa', 'aaa'])=2
+('aaaaab', ['a', 'aa', 'aaa', 'aaaa'])=-1
+('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't', 'pot', 'ten'])=5
+('cars', ['car', 'ca', 'rs'])=2
+('aaaaaaaaaaaaaaaa', ['aaaa', 'aa', 'a'])=4
+

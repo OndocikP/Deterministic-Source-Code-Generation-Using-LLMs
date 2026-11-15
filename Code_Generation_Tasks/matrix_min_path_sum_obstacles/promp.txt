@@ -1,0 +1,17 @@
+Implement a function with the following signature:
+
+`def min_path_sum(grid: list[list[int]]) -> int | None:`
+
+The function must return the minimum path sum from top-left to bottom-right in a matrix.
+
+Requirements:
+- You can move only right or down.
+- Cells with value `-1` are blocked and cannot be used.
+- Return `None` if start/end is blocked or no valid path exists.
+- For valid paths, include both start and end cell values in the sum.
+- Use dynamic programming.
+- Do not mutate input grid.
+- Do not print anything.
+- Do not use external libraries.
+- Return only the complete source code in the target programming language, without Markdown code fences or explanations.
+

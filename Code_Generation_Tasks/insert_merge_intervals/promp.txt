@@ -1,0 +1,15 @@
+Implement a function with the following signature:
+
+`def insert_and_merge(intervals: list[list[int]], new_interval: list[int]) -> list[list[int]]:`
+
+The function must insert one interval into an existing list of non-overlapping intervals sorted by start time, then merge overlaps.
+
+Requirements:
+- Intervals are closed intervals `[start, end]`.
+- Keep output sorted by start.
+- Merge all overlapping or touching intervals.
+- Do not mutate the input arguments.
+- Do not print anything.
+- Do not use external libraries.
+- Return only the complete source code in the target programming language, without Markdown code fences or explanations.
+

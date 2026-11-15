@@ -15,3 +15,8 @@ __pycache__/
 # Keep directories accessible so Git can find allowed files
 !/Code_Generation_Tasks/
 !/Code_Generation_Tasks/**/
+
+Lokal_FrontEnd_Webserver/
+Lokal_Server_V2/
+
+Experiment_Framework/LLM_models/gemini_apikeys.txt

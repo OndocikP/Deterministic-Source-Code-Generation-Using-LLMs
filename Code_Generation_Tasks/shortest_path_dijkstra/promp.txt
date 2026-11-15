@@ -1,0 +1,19 @@
+Implement a function with the following signature:
+
+`def shortest_path_cost(graph: dict, start: str, end: str) -> int | None:`
+
+The function must compute the minimum total path cost from `start` to `end` in a directed weighted graph.
+
+Requirements:
+- Use Dijkstra's algorithm (priority queue based).
+- `graph` is an adjacency mapping like:
+  `{"A": {"B": 4, "C": 2}, "B": {"C": 1}, ...}`
+- Edge weights are non-negative integers.
+- Return `None` if:
+  - `start` or `end` node does not exist in the graph, or
+  - there is no path from `start` to `end`.
+- Handle graphs with disconnected components.
+- Do not mutate the input graph.
+- Do not print anything.
+- Do not use external libraries.
+- Return only the complete source code in the target programming language, without Markdown code fences or explanations.

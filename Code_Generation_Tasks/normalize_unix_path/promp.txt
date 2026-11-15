@@ -1,0 +1,17 @@
+Implement a function with the following signature:
+
+`def normalize_path(path: str) -> str:`
+
+The function must normalize an absolute Unix-style file path.
+
+Requirements:
+- The input path always starts with `/`.
+- Collapse multiple slashes into one.
+- Handle `.` as current directory (ignore it).
+- Handle `..` as parent directory; do not go above root.
+- Return canonical absolute path.
+- Root path must be returned as `/`.
+- Do not use `os.path`, `pathlib`, or external libraries.
+- Do not print anything.
+- Return only the complete source code in the target programming language, without Markdown code fences or explanations.
+

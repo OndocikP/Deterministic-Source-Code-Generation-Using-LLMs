@@ -1,0 +1,18 @@
+Implement a function with the following signature:
+
+`def knight_min_moves(board_size: int, start: tuple[int, int], end: tuple[int, int]) -> int | None:`
+
+The function must return the minimum number of knight moves on a chessboard.
+
+Requirements:
+- Board coordinates are zero-based `(row, col)`.
+- Valid coordinates are `0 <= row, col < board_size`.
+- Use standard knight moves:
+  `(±2, ±1)` and `(±1, ±2)`.
+- Return `0` if start equals end.
+- Return `None` if start/end is outside board or target is unreachable.
+- Use BFS for shortest path.
+- Do not print anything.
+- Do not use external libraries.
+- Return only the complete source code in the target programming language, without Markdown code fences or explanations.
+

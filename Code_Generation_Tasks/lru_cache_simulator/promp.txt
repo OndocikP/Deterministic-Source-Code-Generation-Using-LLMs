@@ -1,0 +1,18 @@
+Implement a function with the following signature:
+
+`def simulate_lru_cache(capacity: int, operations: list[tuple]) -> list[int]:`
+
+The function must simulate an LRU cache and return outputs of all `get` operations.
+
+Requirements:
+- Supported operations:
+  - `('put', key, value)`
+  - `('get', key)`
+- `get` returns value if key exists, otherwise `-1`.
+- Cache eviction policy must be least recently used.
+- Updating an existing key must refresh its recency.
+- Assume `capacity >= 1`.
+- Do not print anything.
+- Do not use external libraries.
+- Return only the complete source code in the target programming language, without Markdown code fences or explanations.
+

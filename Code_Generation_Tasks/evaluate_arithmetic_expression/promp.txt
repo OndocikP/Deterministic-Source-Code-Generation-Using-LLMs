@@ -1,0 +1,19 @@
+Implement a function with the following signature:
+
+`def evaluate_expression(expression: str) -> float:`
+
+The function must evaluate an arithmetic expression string and return the numeric result.
+
+Requirements:
+- Supported operators: `+`, `-`, `*`, `/`.
+- Supported parentheses: `(` and `)`.
+- Support unary minus (for example `-3`, `1 - -2`).
+- Support integer and decimal numbers.
+- Respect standard operator precedence and associativity.
+- Do not use `eval`, `exec`, `ast.literal_eval`, or similar shortcuts.
+- Use a proper parser approach (for example shunting-yard or two-stack algorithm).
+- Return a float result.
+- Do not print anything.
+- Do not use external libraries.
+- Return only the complete source code in the target programming language, without Markdown code fences or explanations.
+

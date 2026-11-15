@@ -1,0 +1,15 @@
+Implement a function with the following signature:
+
+`def lcs_length(first: str, second: str) -> int:`
+
+The function must return the length of the longest common subsequence (LCS) of two strings.
+
+Requirements:
+- Use dynamic programming.
+- Time complexity should be O(n*m) where `n` and `m` are input lengths.
+- Handle empty strings correctly.
+- Case-sensitive comparison.
+- Do not print anything.
+- Do not use external libraries.
+- Return only the complete source code in the target programming language, without Markdown code fences or explanations.
+
