@@ -1,5 +1,6 @@
 import inspect
 import importlib
+import json
 import os
 import sys
 from pathlib import Path
@@ -65,7 +66,7 @@ def test__folders(folder_path): #spracovanie vstupou v testovacom adresari
     if setup.get('num_generations', None) is None:
         print(f"\033[93mnum_generations not specified in setup for folder: {folder_path}\033[0m")
         return False
-    print("\n")
+    print(f"\tgenerated code count for LLM: {setup.get('num_generations', 0)}\n")
     #print(f"\ttest: {fm.count_files_in_folder(folder_path,'promp')}")
 
     return generate_code_from_llm_model(promp, setup, folder_path)
@@ -77,6 +78,7 @@ def generate_code_from_llm_model(promp, setup, folder_path):
         os.makedirs(folder_path)
 
     any_model_processed = False
+    LLM = {}
     for model in setup.get('models', []):
         #print(f"\nGenerating code with model: {model}")
         if "_" not in model:
@@ -95,55 +97,42 @@ def generate_code_from_llm_model(promp, setup, folder_path):
             continue
 
         LLM_provider = provider_name
-        print(f"LLM_provider: {LLM_provider}, LLM_model: {LLM_model}")
+        #print(f"LLM_provider: {LLM_provider}, LLM_model: {LLM_model}")
         LLM_provider = LLM_providers(LLM_provider)
         if LLM_provider is None:
             print(f"\033[91mUnsupported LLM_provider '{provider_name}' specified in setup for folder: {folder_path}\033[0m")
             continue
+        LLM[model] = {"provider": LLM_provider, "model": LLM_model, "num_generated": fm.count_code_genetate(folder_path, model, setup.get('language', None))}##-----------------
         #print(f"Using LLM_provider: {LLM_provider}")
+        #safe_int = setup.get('num_generations', 0)
+        #while setup.get('num_generations', 0) > fm.count_code_genetate(folder_path, model, setup.get('language', None)) and safe_int > 0:
 
 
-        module_name = f"{LLM_models}.{LLM_provider}"
-        module = importlib.import_module(module_name)
-        LLL_func = getattr(module, "generate_code", None)
-        if LLL_func is None:
-            print(f"\033[93mFunction 'generate_code' not found in LLM_provider '{LLM_provider}' for folder: {folder_path}\033[0m")
-            return False
+    #print(json.dumps(LLM, indent=4, ensure_ascii=False))
+    while True:
+        int_change = False
 
-        accepted_params = set(inspect.signature(LLL_func).parameters)
+        for model in LLM:
+            model_info = LLM[model]
+            provider = model_info["provider"]
+            llm_model = model_info["model"]
+            print(f"Calling LLM with model: {model}, info: {model_info}")
+            if model_info["num_generated"] >= setup.get('num_generations', 0):
+                print(f"\033[90mNo new code generated for model '{model}' in folder: {folder_path}\033[0m")
+                any_model_processed = True
+                continue
+            code = call_llm(provider, llm_model, setup, promp)
+            if code is None:
+                continue
 
-        inputs = {
-            key: value
-            for key, value in setup.items()
-            if key not in {"models", "num_generations"} and key in accepted_params
-        }
-        inputs["prompt"] = promp
-        inputs["model"] = LLM_model
-
-        # odstráni akékoľvek nepodporované argumenty, ktoré funkcia nepozná
-        inputs = {
-            key: value
-            for key, value in inputs.items()
-            if key in accepted_params or key in {"prompt", "model"}
-        }
-        safe_int = setup.get('num_generations', 0)
-        while setup.get('num_generations', 0) > fm.count_code_genetate(folder_path, model, setup.get('language', None)) and safe_int > 0:
-            try:
-                code = LLL_func(**inputs)
-            except RuntimeError as exc:
-                print(
-                        f"\033[93mModel '{model}' zlyhal: {exc}. "
-                        "Preskakujem na ďalší model.\033[0m"
-                )
-                break
-
-            print(f"Generated code: length {len(code)}")
             fm.save_code_to_file(folder_path, model, code, setup.get('language', None))
-            safe_int -= 1
             any_model_processed = True
-        else:
-            print(f"\033[90mNo new code generated for model '{model}' in folder: {folder_path}\033[0m")
-            any_model_processed = True
+            int_change = True
+
+        if not int_change:
+            break
+
+        
 
     if not any_model_processed:
         print(f"\033[93mŽiadny model úspešne nespracoval generovanie vo folderi: {folder_path}\033[0m")
@@ -151,90 +140,63 @@ def generate_code_from_llm_model(promp, setup, folder_path):
 
     return True
 
-def generate_code_from_llm_model_old(promp, setup, folder_path):
-    any_model_processed = False
-    for model in setup.get('models', []):
-        #print(f"\nGenerating code with model: {model}")
-        if "_" not in model:
-            print(
-                f"\033[93mInvalid model format '{model}' in setup for folder: {folder_path}. "
-                "Expected format '<provider>_<model>'. Preskakujem.\033[0m"
-            )
-            continue
 
-        provider_name, LLM_model = model.split('_', 1)
-        if not LLM_model.strip():
-            print(
-                f"\033[93mInvalid model name '{model}' in setup for folder: {folder_path}. "
-                "Model časť je prázdna. Preskakujem.\033[0m"
-            )
-            continue
-
-        LLM_provider = provider_name
-        print(f"LLM_provider: {LLM_provider}, LLM_model: {LLM_model}")
-        LLM_provider = LLM_providers(LLM_provider)
-        if LLM_provider is None:
-            print(f"\033[91mUnsupported LLM_provider '{provider_name}' specified in setup for folder: {folder_path}\033[0m")
-            continue
-        #print(f"Using LLM_provider: {LLM_provider}")
-
-
-        module_name = f"{LLM_models}.{LLM_provider}"
-        module = importlib.import_module(module_name)
-        LLL_func = getattr(module, "generate_code", None)
-        if LLL_func is None:
-            print(f"\033[93mFunction 'generate_code' not found in LLM_provider '{LLM_provider}' for folder: {folder_path}\033[0m")
-            return False
-
-        accepted_params = set(inspect.signature(LLL_func).parameters)
-
-        inputs = {
-            key: value
-            for key, value in setup.items()
-            if key not in {"models", "num_generations"} and key in accepted_params
-        }
-        inputs["prompt"] = promp
-        inputs["model"] = LLM_model
-
-        # odstráni akékoľvek nepodporované argumenty, ktoré funkcia nepozná
-        inputs = {
-            key: value
-            for key, value in inputs.items()
-            if key in accepted_params or key in {"prompt", "model"}
-        }
-        safe_int = setup.get('num_generations', 0)
-        while setup.get('num_generations', 0) > fm.count_code_genetate(folder_path, model, setup.get('language', None)) and safe_int > 0:
-            try:
-                code = LLL_func(**inputs)
-            except RuntimeError as exc:
-                print(
-                        f"\033[93mModel '{model}' zlyhal: {exc}. "
-                        "Preskakujem na ďalší model.\033[0m"
-                )
-                break
-
-            print(f"Generated code: length {len(code)}")
-            fm.save_code_to_file(folder_path, model, code, setup.get('language', None))
-            safe_int -= 1
-            any_model_processed = True
-        else:
-            print(f"\033[90mNo new code generated for model '{model}' in folder: {folder_path}\033[0m")
-            any_model_processed = True
-
-    if not any_model_processed:
-        print(f"\033[93mŽiadny model úspešne nespracoval generovanie vo folderi: {folder_path}\033[0m")
+def call_llm(provider, LLM_model, setup, promp):
+    if provider is None or LLM_model is None:
+        print("\033[93mProvider and model must be specified.\033[0m")
+        return None
+    
+    module_name = f"Experiment_Framework.LLM_models.{provider}"
+    module = importlib.import_module(module_name)
+    LLL_func = getattr(module, "generate_code", None)
+    if LLL_func is None:
+        print(f"\033[93mFunction 'generate_code' not found in LLM_provider '{provider}' for folder: {None}\033[0m")
         return False
+    
+    accepted_params = set(inspect.signature(LLL_func).parameters)
+    
+    inputs = {
+        key: value
+        for key, value in setup.items()
+        if key not in {"models", "num_generations"} and key in accepted_params
+    }
+    inputs["prompt"] = promp
+    inputs["model"] = LLM_model
+    
+            # odstráni akékoľvek nepodporované argumenty, ktoré funkcia nepozná
+    inputs = {
+                key: value
+                for key, value in inputs.items()
+                if key in accepted_params or key in {"prompt", "model"}
+            }
+    try:
+                code = LLL_func(**inputs)
+    except RuntimeError as exc:
+        print(
+            f"\033[93mModel '{LLM_model}' zlyhal: {exc}. "
+            "Preskakujem na ďalší model.\033[0m"
+        )
 
-    return True
+    if 'code' not in locals():
+        print(f"\033[93mNo code generated by model '{LLM_model}'\033[0m")
+        return None
+
+    print(f"Generated code: length {len(code)}")
+    return code
+    
 
 def main():
     print("Zacinam prechadzat testovaciu zlozk:")
     folders = fm.open_folder_return_folders(CODE_GENERATION_TASKS) #otvorenie hlavneh testovacieho adresara
+
+    count = 0
     for folder in folders:
         if not test__folders(folder):
             print(f"\033[91mTest failed for folder: {folder}\033[0m")
         else:
             print(f"\033[92mTest passed for folder: {folder}\033[0m")
+        print(f"{count/len(folders)*100:.2f}%\n")
+        count += 1
 
     pass
 

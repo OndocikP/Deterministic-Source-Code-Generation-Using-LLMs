@@ -138,8 +138,8 @@ def generate_code(
 
             delay = (base_retry_delay * (2 ** (attempt - 1))) if retryable else 1.0
             print(
-                f"Gemini API je dočasne nedostupné (status: {status_code}). "
-                f"Skúšam iný API kľúč, pokus {attempt}/{max_retries} za {delay:.1f}s..."
+                f"\tGemini API je dočasne nedostupné (status: {status_code}). "
+                f"\tSkúšam iný API kľúč, pokus {attempt}/{max_retries} za {delay:.1f}s..."
             )
             time.sleep(delay)
         except Exception as exc:
