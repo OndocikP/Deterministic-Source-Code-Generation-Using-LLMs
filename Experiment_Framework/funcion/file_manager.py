@@ -1,5 +1,14 @@
 import os
 
+## load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv()   
+
+PRINTS_SHORTS = os.getenv("PRINTS_SHORTS", "false").lower() == "true"
+PRINTS_SHORTS = bool(PRINTS_SHORTS)
+print(PRINTS_SHORTS)
+
+
 def open_folder_return_files(folder_path):
     return [os.path.join(folder_path, f) for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
 
@@ -94,7 +103,9 @@ def save_code_to_file(folder_path, model, content,language): # ulozenie suboru s
 
     with open(target_file_path, "w", encoding="utf-8") as f:
         f.write(content)
-    print(f"Saved code to file: {target_file_path}")    
+
+    if PRINTS_SHORTS:
+        print(f"Saved code to file: {target_file_path}")
     return file_index
     
 
