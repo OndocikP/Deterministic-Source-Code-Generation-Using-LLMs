@@ -4,9 +4,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()   
 
-PRINTS_SHORTS = os.getenv("PRINTS_SHORTS", "false").lower() == "true"
-PRINTS_SHORTS = bool(PRINTS_SHORTS)
-print(PRINTS_SHORTS)
+PRINTS_SHORTS = bool(os.getenv("PRINTS_SHORTS", "false").lower() == "true")
 
 
 def open_folder_return_files(folder_path):

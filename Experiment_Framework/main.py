@@ -114,8 +114,8 @@ def generate_code_from_llm_model(promp, setup, folder_path):
 
 
     #print(json.dumps(LLM, indent=4, ensure_ascii=False))
-    int_change = False
-    while not int_change:
+    int_change = True
+    while int_change:
         int_change = False
         if PRINTS_SHORTS:
             print(json.dumps(LLM, indent=4, ensure_ascii=False))

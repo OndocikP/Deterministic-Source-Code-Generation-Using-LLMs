@@ -14,6 +14,7 @@ _FENCED_CODE_BLOCK_RE = re.compile(
     re.DOTALL,
 )
 
+PRINTS_SHORTS = bool(os.getenv("PRINTS_SHORTS", "false").lower() == "true")
 
 def _load_api_keys() -> list[str]:
     keys: list[str] = []
@@ -137,10 +138,11 @@ def generate_code(
                 ) from exc
 
             delay = (base_retry_delay * (2 ** (attempt - 1))) if retryable else 1.0
-            print(
-                f"\tGemini API je dočasne nedostupné (status: {status_code}). "
-                f"\tSkúšam iný API kľúč, pokus {attempt}/{max_retries} za {delay:.1f}s..."
-            )
+            if PRINTS_SHORTS:
+                print(
+                    f"\tGemini API je dočasne nedostupné (status: {status_code}). "
+                    f"\tSkúšam iný API kľúč, pokus {attempt}/{max_retries} za {delay:.1f}s..."
+                )
             time.sleep(delay)
         except Exception as exc:
             if attempt == max_retries:
@@ -150,8 +152,8 @@ def generate_code(
 
             delay = base_retry_delay * (2 ** (attempt - 1))
             print(
-                "Model nevrátil použiteľnú odpoveď. "
-                f"Skúšam iný API kľúč, pokus {attempt}/{max_retries} za {delay:.1f}s..."
+                    "Model nevrátil použiteľnú odpoveď. "
+                    f"Skúšam iný API kľúč, pokus {attempt}/{max_retries} za {delay:.1f}s..."
             )
             time.sleep(delay)
 
