@@ -27,7 +27,5 @@ Nainštalovaná pamäť RAM	16,0 GB (použiteľná pamäť: 15,7 GB)
 Grafická karta	NVIDIA GeForce RTX 4060 Laptop GPU (8 GB)
 Intel(R) UHD Graphics (128 MB)
 Úložisko	Používa sa 1 004 GB z 2,75 TB
-ID zariadenia	8E2C3883-E653-4F39-8635-1DFC89C2229D
-Kód Product ID	00342-22159-73680-AAOEM
 Typ systému	64-bitový operačný systém, procesor typu x64
 Pero a dotyk	Pre túto obrazovku nie je k dispozícii zadávanie vstupu perom ani dotykom
