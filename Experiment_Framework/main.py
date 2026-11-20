@@ -80,7 +80,13 @@ def test__folders(folder_path): #spracovanie vstupou v testovacom adresari
 
 def generate_code_from_llm_model(promp, setup, folder_path):
 
-    folder_path = folder_path.replace(CODE_GENERATION_TASKS, CODE_GENERATION_TASKS+"_"+os_name)
+    print(Path(folder_path).name)
+
+    folder_path = os.path.join(fm.RESULTS_FOLDER, os_name,Path(folder_path).name)
+    #print("Save folder:", folder_path)
+
+    #folder_path = folder_path.replace(CODE_GENERATION_TASKS, CODE_GENERATION_TASKS+"_"+os_name)
+
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
@@ -200,19 +206,19 @@ def call_llm(provider, LLM_model, setup, promp):
 
 def main():
     print("Zacinam prechadzat testovaciu zlozk:")
+
     folders = fm.open_folder_return_folders(fm.PROMPTS_FOLDER) #otvorenie hlavneh testovacieho adresara
 
     count = 0
     for folder in folders:
-        print(Path(folder).name)
-
+        #print(Path(folder).name)
 
         if not test__folders(folder):
             print(f"\033[91mTest failed for folder: {folder}\033[0m")
         else:
             print(f"\033[92mTest passed for folder: {folder}\033[0m")
-        print(f"{count/len(folders)*100:.2f}%\n")
         count += 1
+        print(f"{count/len(folders)*100:.2f}%\n")
 
     pass
 

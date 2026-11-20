@@ -1,4 +1,4 @@
-models=Gemini_gemini-3.1-flash-lite,Gemini_gemini-3.1-flash,Ollama_qwen2.5-coder:14b,Ollama_gemma4:e4b,Ollama_qwen3:8b,Ollama_qwen3.5:9b,Ollama_deepseek-coder-v2:16b,Ollama_codellama:7b-instruct,Ollama_qwen2.5-coder:7b
+models=Gemini_gemini-3.1-flash-lite,Ollama_qwen2.5-coder:14b,Ollama_gemma4:e4b,Ollama_qwen3:8b,Ollama_qwen3.5:9b,Ollama_deepseek-coder-v2:16b,Ollama_codellama:7b-instruct,Ollama_qwen2.5-coder:7b
 language=Python
 num_generations=20
 temperature = 0.0

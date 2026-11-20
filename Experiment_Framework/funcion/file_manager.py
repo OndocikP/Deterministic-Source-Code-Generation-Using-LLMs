@@ -14,8 +14,10 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-RESULTS_FOLDER = os.path.join(PROJECT_ROOT, "Results")
-PROMPTS_FOLDER = os.path.join(PROJECT_ROOT, "Prompts")
+Evaluation_folder = str(PROJECT_ROOT.parent / "Evaluations")
+PROMPTS_FOLDER = os.path.join(Evaluation_folder, "Prompts")
+
+RESULTS_FOLDER = os.path.join(Evaluation_folder, "Results")
 
     
 def open_folder_return_files(folder_path):

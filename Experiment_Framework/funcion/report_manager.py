@@ -185,10 +185,21 @@ def create_avg_report_from_chyldren_folders(folder_path):
     delete_all_reports(folder_path)
     report = {}
 
-    for folder_languare in fm.open_folder_return_folders(folder_path):
-        if get_report(folder_languare) is None:
+    for folder_child in fm.open_folder_return_folders(folder_path):
+        if get_report(folder_child) is None:
             continue
-        for row in get_report(folder_languare)[1:]:
+
+        if ".dashboard.json" in folder_child:
+            #nacitaj .dashboard.json json a ked v jasone je include_in_averages = false continue
+            dashboard_file = Path(folder_child) / ".dashboard.json"
+            if dashboard_file.exists():
+                import json
+                with dashboard_file.open("r", encoding="utf-8") as f:
+                    dashboard_data = json.load(f)
+                    if not dashboard_data.get("include_in_averages", True):
+                        continue
+
+        for row in get_report(folder_child)[1:]:
 
             if row[0] not in report:
                 report[row[0]] = [0.0,0.0,0.0,0]

@@ -63,8 +63,7 @@ def os_task_folder(folder_os_task, tests_data):
 
 
 
-def main():
-    zmena = False
+def main(zmena):
     for folder_os in fm.open_folder_return_folders(os.path.join(Evaluation_folder, "Results")):
         print(Path(folder_os).name)
         zmenav_os = False
@@ -93,9 +92,9 @@ def main():
             #break#XXX
 
 
-        #if zmenav_os:
-            #main()
-            #return
+            if zmenav_os:
+                main(zmenav_os)
+                return
 
         if zmenav_os or rm.get_report(folder_os) is None:
             rm.create_avg_report_from_chyldren_folders(folder_os)
@@ -107,4 +106,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(False)
