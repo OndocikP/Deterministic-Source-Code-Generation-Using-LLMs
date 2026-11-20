@@ -1,0 +1,11 @@
+def min_word_break(text: str, dictionary: list[str]) -> int:
+    n = len(text)
+    dp = [float('inf')] * (n + 1)
+    dp[0] = 0
+
+    for i in range(1, n + 1):
+        for word in dictionary:
+            if text[i - len(word):i] == word:
+                dp[i] = min(dp[i], dp[i - len(word)] + 1)
+
+    return dp[n] if dp[n] != float('inf') else -1

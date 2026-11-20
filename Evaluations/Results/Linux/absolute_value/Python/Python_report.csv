@@ -1,0 +1,9 @@
+File_name,Code_Identity,AST_Structure,Behavioral_Equivalence
+Gemini_gemini-3_1-flash-lite,1.0,1.0,1.0
+Ollama_codellama_7b-instruct,1.0,1.0,0.0
+Ollama_deepseek-coder-v2_16b,1.0,1.0,1.0
+Ollama_gemma4_e4b,1.0,1.0,1.0
+Ollama_qwen2_5-coder_14b,1.0,1.0,1.0
+Ollama_qwen2_5-coder_7b,1.0,1.0,1.0
+Ollama_qwen3_5_9b,1.0,1.0,1.0
+Ollama_qwen3_8b,1.0,1.0,1.0

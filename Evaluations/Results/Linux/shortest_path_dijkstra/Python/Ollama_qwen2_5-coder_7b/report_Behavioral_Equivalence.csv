@@ -1,0 +1,211 @@
+File_name,question,Expect,Get,Test
+Ollama_qwen2_5-coder_7b_0.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_0.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_0.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_0.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_0.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_0.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_0.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_0.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_0.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_0.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_1.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_1.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_1.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_1.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_1.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_1.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_1.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_1.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_1.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_1.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_10.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_10.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_10.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_10.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_10.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_10.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_10.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_10.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_10.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_10.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_11.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_11.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_11.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_11.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_11.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_11.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_11.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_11.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_11.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_11.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_12.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_12.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_12.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_12.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_12.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_12.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_12.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_12.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_12.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_12.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_13.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_13.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_13.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_13.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_13.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_13.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_13.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_13.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_13.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_13.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_14.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_14.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_14.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_14.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_14.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_14.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_14.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_14.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_14.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_14.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_15.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_15.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_15.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_15.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_15.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_15.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_15.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_15.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_15.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_15.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_16.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_16.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_16.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_16.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_16.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_16.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_16.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_16.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_16.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_16.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_17.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_17.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_17.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_17.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_17.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_17.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_17.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_17.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_17.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_17.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_18.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_18.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_18.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_18.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_18.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_18.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_18.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_18.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_18.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_18.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_19.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_19.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_19.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_19.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_19.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_19.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_19.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_19.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_19.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_19.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_2.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_2.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_2.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_2.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_2.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_2.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_2.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_2.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_2.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_2.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_20.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_20.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_20.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_20.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_20.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_20.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_20.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_20.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_20.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_20.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_3.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_3.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_3.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_3.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_3.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_3.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_3.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_3.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_3.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_3.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_4.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_4.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_4.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_4.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_4.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_4.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_4.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_4.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_4.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_4.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_5.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_5.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_5.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_5.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_5.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_5.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_5.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_5.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_5.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_5.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_6.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_6.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_6.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_6.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_6.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_6.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_6.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_6.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_6.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_6.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_7.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_7.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_7.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_7.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_7.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_7.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_7.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_7.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_7.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_7.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_8.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_8.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_8.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_8.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_8.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_8.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_8.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_8.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_8.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_8.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS
+Ollama_qwen2_5-coder_7b_9.py,"({'A': {'B': 4, 'C': 2}, 'B': {'C': 1, 'D': 5}, 'C': {'B': 3, 'D': 8, 'E': 10}, 'D': {'E': 2, 'F': 6}, 'E': {'F': 2}, 'F': {}}, 'A', 'F')",13,13,PASS
+Ollama_qwen2_5-coder_7b_9.py,"({'s': {'a': 1, 'b': 5}, 'a': {'b': 2, 'c': 2}, 'b': {'c': 1}, 'c': {'t': 3}, 't': {}}, 's', 't')",6,6,PASS
+Ollama_qwen2_5-coder_7b_9.py,"({'A': {'B': 1}, 'B': {}, 'C': {'A': 2}}, 'C', 'B')",3,3,PASS
+Ollama_qwen2_5-coder_7b_9.py,"({'A': {'B': 2}, 'B': {'C': 2}, 'C': {}, 'D': {'A': 1}}, 'D', 'C')",5,5,PASS
+Ollama_qwen2_5-coder_7b_9.py,"({'A': {'B': 1}, 'B': {'A': 1}, 'C': {}}, 'A', 'C')",None,None,PASS
+Ollama_qwen2_5-coder_7b_9.py,"({'0': {'1': 7, '2': 9, '5': 14}, '1': {'2': 10, '3': 15}, '2': {'3': 11, '5': 2}, '3': {'4': 6}, '4': {'5': 9}, '5': {'4': 9}}, '0', '4')",20,20,PASS
+Ollama_qwen2_5-coder_7b_9.py,"({'A': {'B': 10, 'C': 1}, 'B': {'D': 1}, 'C': {'B': 1, 'D': 12}, 'D': {}}, 'A', 'D')",3,3,PASS
+Ollama_qwen2_5-coder_7b_9.py,"({'x': {'y': 2}, 'y': {'z': 2}, 'z': {}}, 'x', 'x')",0,0,PASS
+Ollama_qwen2_5-coder_7b_9.py,"({'a': {'b': 3}, 'b': {}}, 'a', 'missing')",None,None,PASS
+Ollama_qwen2_5-coder_7b_9.py,"({'a': {'b': 3}, 'b': {}}, 'missing', 'b')",None,None,PASS

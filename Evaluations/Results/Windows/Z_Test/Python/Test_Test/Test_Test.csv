@@ -1,0 +1,5 @@
+File_name,Code_Identity,AST_Structure,Behavioral_Equivalence
+K1.py,0.33,0.67,1.0
+K2.py,0.0,0.67,1.0
+K3.py,0.0,0.0,1.0
+K4_K1copy.py,0.33,0.67,1.0
