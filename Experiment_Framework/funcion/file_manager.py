@@ -1,12 +1,23 @@
 import os
+import sys
+from pathlib import Path
 
 ## load environment variables from .env file
 from dotenv import load_dotenv
 load_dotenv()   
 
 PRINTS_SHORTS = bool(os.getenv("PRINTS_SHORTS", "false").lower() == "true")
+CODE_GENERATION_TASKS = os.getenv("CODE_GENERATION_TASKS", "Code_Generation_Tasks")
 
 
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+RESULTS_FOLDER = os.path.join(PROJECT_ROOT, "Results")
+PROMPTS_FOLDER = os.path.join(PROJECT_ROOT, "Prompts")
+
+    
 def open_folder_return_files(folder_path):
     return [os.path.join(folder_path, f) for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
 
@@ -17,6 +28,10 @@ def read_file(file_path):
     with open(file_path, "r", encoding="utf-8") as f:
         return f.read()
 
+def get_count_code_files(folder_path):
+    #pokial subor nekonci na .csv spocitaj
+    code_files = get_codes_files(folder_path)
+    return len(code_files)
 
 def load_setup(file_path):  # Načíta konfiguráciu zo súboru vo formáte key=value (json)
     setup = {}
@@ -148,3 +163,13 @@ def language_extension(language):   # pre zistenie pripony suboru podla jazyka
         "PHP": "php"
     }
     return lang.get(language, None)
+
+
+def get_codes_files(folder_path): # vrati vsetke subory vo folderu ktore niesu .csv
+    code_files = []
+    code_end = [".py", ".js", ".java", ".cpp", ".cs", ".go", ".rb", ".php"]
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            if not file.endswith(".csv") and any(file.endswith(ext) for ext in code_end):
+                code_files.append(os.path.join(root, file))
+    return code_files

@@ -17,7 +17,9 @@ os_name = platform.system()
 
 print("os_name:", os_name)
 
-CODE_GENERATION_TASKS = str(PROJECT_ROOT / "Code_Generation_Tasks")
+CODE_GENERATION_TASKS = str(PROJECT_ROOT / fm.CODE_GENERATION_TASKS)
+
+
 LLM_models = "Experiment_Framework.LLM_models"
 
 
@@ -198,10 +200,13 @@ def call_llm(provider, LLM_model, setup, promp):
 
 def main():
     print("Zacinam prechadzat testovaciu zlozk:")
-    folders = fm.open_folder_return_folders(CODE_GENERATION_TASKS) #otvorenie hlavneh testovacieho adresara
+    folders = fm.open_folder_return_folders(fm.PROMPTS_FOLDER) #otvorenie hlavneh testovacieho adresara
 
     count = 0
     for folder in folders:
+        print(Path(folder).name)
+
+
         if not test__folders(folder):
             print(f"\033[91mTest failed for folder: {folder}\033[0m")
         else:
