@@ -211,7 +211,7 @@ def create_avg_report_from_chyldren_folders(folder_path):
     for row in report:
         for index in range(len(report[row][:-1])):
             #print(row, report[row][:-1], report[row][3])
-            report[row][index] /= report[row][3] # zaokruhlit na ROUND_TO
+            report[row][index] /= report[row][3]
             report[row][index] = round(report[row][index], ROUND_TO)
 
         #print([row] + report[row][:-1])
@@ -219,7 +219,6 @@ def create_avg_report_from_chyldren_folders(folder_path):
             f"{Path(folder_path).name}_report.csv"
         )
         write_report_B(report_file, [[row] + report[row][:-1]])
-        #write_report(folder_path, folder_path / f"{Path(folder_path).name}_report.csv",[ [row] + report[row][:-1] ])
 
 
     print(f"Generated report for: {folder_path}")

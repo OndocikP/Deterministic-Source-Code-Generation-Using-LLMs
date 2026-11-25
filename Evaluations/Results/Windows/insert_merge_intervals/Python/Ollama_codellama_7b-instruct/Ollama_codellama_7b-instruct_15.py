@@ -9,11 +9,9 @@ def insert_and_merge(intervals: list[list[int]], new_interval: list[int]) -> lis
             intervals.pop(i + 1)
 
     # Insert the new interval
-    for i in range(len(intervals)):
-        if intervals[i][1] < new_interval[0]:
-            intervals.insert(i, new_interval)
-            break
-    else:
-        intervals.append(new_interval)
+    intervals.append(new_interval)
+
+    # Sort the intervals by start time again
+    intervals.sort(key=lambda x: x[0])
 
     return intervals

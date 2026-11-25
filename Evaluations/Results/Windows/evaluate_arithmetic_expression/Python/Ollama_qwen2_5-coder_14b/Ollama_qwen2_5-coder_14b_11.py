@@ -51,13 +51,13 @@ def evaluate_expression(expression: str) -> float:
             while operators and operators[-1] != '(':
                 apply_operator(operators, values)
             operators.pop()  # pop '('
-        elif expression[i] in '+-*/':
+        elif expression[i] in "+-*/":
             while (operators and operators[-1] != '(' and
                    greater_precedence(operators[-1], expression[i])):
                 apply_operator(operators, values)
             operators.append(expression[i])
         elif expression[i] == '-':
-            if i == 0 or expression[i - 1] in '+-*/(':
+            if i == 0 or expression[i - 1] in "+-*/(":
                 values.append(0)
                 operators.append('-')
         i += 1

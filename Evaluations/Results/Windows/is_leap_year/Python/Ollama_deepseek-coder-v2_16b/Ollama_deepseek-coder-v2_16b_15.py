@@ -13,6 +13,13 @@ def is_leap_year(value: int) -> bool:
     """
     if not isinstance(value, int):
         return False
-    if value % 4 == 0 and (value % 100 != 0 or value % 400 == 0):
-        return True
-    return False
+    if value % 4 == 0:
+        if value % 100 == 0:
+            if value % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False

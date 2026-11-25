@@ -64,6 +64,11 @@ Ollama_codellama_7b-instruct_2.py,3,False,False,PASS
 Ollama_codellama_7b-instruct_2.py,0,True,True,PASS
 Ollama_codellama_7b-instruct_2.py,-4,True,True,PASS
 Ollama_codellama_7b-instruct_2.py,11,False,False,PASS
+Ollama_codellama_7b-instruct_20.py,2,True,True,PASS
+Ollama_codellama_7b-instruct_20.py,3,False,False,PASS
+Ollama_codellama_7b-instruct_20.py,0,True,True,PASS
+Ollama_codellama_7b-instruct_20.py,-4,True,True,PASS
+Ollama_codellama_7b-instruct_20.py,11,False,False,PASS
 Ollama_codellama_7b-instruct_3.py,2,True,True,PASS
 Ollama_codellama_7b-instruct_3.py,3,False,False,PASS
 Ollama_codellama_7b-instruct_3.py,0,True,True,PASS

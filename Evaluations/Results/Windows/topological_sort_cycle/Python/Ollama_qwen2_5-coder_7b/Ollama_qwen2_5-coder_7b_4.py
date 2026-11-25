@@ -9,8 +9,6 @@ def topological_order(graph: dict[str, list[str]]) -> list[str] | None:
 
     topological_order = []
     while queue:
-        if len(queue) > 1:
-            queue.sort()
         node = queue.pop(0)
         topological_order.append(node)
 
@@ -18,6 +16,7 @@ def topological_order(graph: dict[str, list[str]]) -> list[str] | None:
             in_degree[neighbor] -= 1
             if in_degree[neighbor] == 0:
                 queue.append(neighbor)
+                queue.sort()
 
     if len(topological_order) != len(graph):
         return None

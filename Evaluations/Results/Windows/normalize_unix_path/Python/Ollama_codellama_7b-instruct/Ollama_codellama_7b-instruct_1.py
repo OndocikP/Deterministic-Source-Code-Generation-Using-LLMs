@@ -1,12 +1,14 @@
 def normalize_path(path: str) -> str:
-    """
-    Normalize an absolute Unix-style file path.
-    """
-    # Collapse multiple slashes into one
-    path = re.sub(r'//+', '/', path)
-    # Handle . as current directory (ignore it)
-    path = re.sub(r'\.+', '', path)
-    # Handle .. as parent directory; do not go above root
-    path = re.sub(r'\.\./+', '', path)
-    # Return canonical absolute path
-    return os.path.abspath(path)
+    # Replace multiple slashes with one
+    path = path.replace("//", "/")
+    # Remove leading slash
+    path = path[1:]
+    # Replace . with empty string
+    path = path.replace(".", "")
+    # Replace .. with empty string
+    path = path.replace("..", "")
+    # If path is empty, return root
+    if path == "":
+        return "/"
+    # If path is not empty, return canonical absolute path
+    return "/" + path

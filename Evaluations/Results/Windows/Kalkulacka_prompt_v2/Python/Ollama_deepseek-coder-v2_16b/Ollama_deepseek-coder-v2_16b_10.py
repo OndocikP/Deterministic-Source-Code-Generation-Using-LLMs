@@ -8,7 +8,7 @@ def calculate(expression: str) -> float:
 
     def parse_term(tokens, index):
         left = parse_factor(tokens, index)
-        while index < len(tokens) and tokens[index] in ['*', '/']:
+        while index < len(tokens) and (tokens[index] == '*' or tokens[index] == '/'):
             op = tokens[index]
             index += 1
             right = parse_factor(tokens, index)
@@ -24,17 +24,12 @@ def calculate(expression: str) -> float:
         elif tokens[index] == '(':
             index += 1
             value, index = parse_expression(tokens[index:])
-            if tokens[index] == ')':
-                index += 1
+            if tokens[index] != ')':
+                raise ValueError("Missing closing parenthesis")
+            index += 1
             return value
-        elif tokens[index] == '-':
-            index += 1
-            return -parse_factor(tokens, index)
-        elif tokens[index] == '+':
-            index += 1
-            return parse_factor(tokens, index)
         else:
-            raise ValueError("Invalid token: " + tokens[index])
+            raise ValueError("Invalid token")
 
     tokens = parse_expression(expression)
     result, _ = parse_term(tokens, 0)

@@ -1,9 +1,8 @@
 def insert_and_merge(intervals: list[list[int]], new_interval: list[int]) -> list[list[int]]:
     result = []
-    i = 0
-    n = len(intervals)
+    i, n = 0, len(intervals)
     
-    # Add all intervals before the new interval
+    # Add all intervals ending before new_interval starts
     while i < n and intervals[i][1] < new_interval[0]:
         result.append(intervals[i])
         i += 1
@@ -16,7 +15,7 @@ def insert_and_merge(intervals: list[list[int]], new_interval: list[int]) -> lis
     
     result.append(new_interval)
     
-    # Add all intervals after the new interval
+    # Add the rest of the intervals
     while i < n:
         result.append(intervals[i])
         i += 1

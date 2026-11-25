@@ -1,6 +1,6 @@
 def absolute_value(value: float) -> float | None:
     """
-    Returns the absolute value of the input number.
+    Return the absolute value of the input number.
     
     Args:
         value (float): The number to get the absolute value of.

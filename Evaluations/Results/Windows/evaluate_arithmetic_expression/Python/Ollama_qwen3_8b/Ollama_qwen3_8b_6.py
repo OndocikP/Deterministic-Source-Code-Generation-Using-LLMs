@@ -18,56 +18,41 @@ def evaluate_expression(expression: str) -> float:
                 i += 1
         return tokens
 
-    def parse_number(token):
-        if '.' in token:
-            return float(token)
-        return int(token)
+    def parse_expression(tokens):
+        def parse_term(tokens):
+            def parse_factor(tokens):
+                if tokens[0] == '(':
+                    tokens.pop(0)
+                    result = parse_expression(tokens)
+                    if tokens[0] != ')':
+                        raise ValueError("Mismatched parentheses")
+                    tokens.pop(0)
+                    return result
+                else:
+                    num = float(tokens.pop(0))
+                    return num
 
-    def apply_operator(operand_stack, operator_stack):
-        if not operand_stack:
-            return
-        op2 = operand_stack.pop()
-        op1 = operand_stack.pop()
-        op = operator_stack.pop()
-        if op == '+':
-            operand_stack.append(op1 + op2)
-        elif op == '-':
-            operand_stack.append(op1 - op2)
-        elif op == '*':
-            operand_stack.append(op1 * op2)
-        elif op == '/':
-            operand_stack.append(op1 / op2)
+            left = parse_factor(tokens)
+            while tokens and tokens[0] in '*/':
+                op = tokens.pop(0)
+                right = parse_factor(tokens)
+                if op == '*':
+                    left *= right
+                elif op == '/':
+                    if right == 0:
+                        raise ValueError("Division by zero")
+                    left /= right
+            return left
+
+        left = parse_term(tokens)
+        while tokens and tokens[0] in '+-':
+            op = tokens.pop(0)
+            right = parse_term(tokens)
+            if op == '+':
+                left += right
+            elif op == '-':
+                left -= right
+        return left
 
     tokens = tokenize(expression)
-    operand_stack = []
-    operator_stack = []
-    i = 0
-    while i < len(tokens):
-        token = tokens[i]
-        if token == '(':
-            operator_stack.append(token)
-            i += 1
-        elif token == ')':
-            while operator_stack and operator_stack[-1] != '(':
-                apply_operator(operand_stack, operator_stack)
-            if operator_stack and operator_stack[-1] == '(':
-                operator_stack.pop()
-            i += 1
-        elif token in '+-*/':
-            while operator_stack and operator_stack[-1] != '(' and precedence(token) <= precedence(operator_stack[-1]):
-                apply_operator(operand_stack, operator_stack)
-            operator_stack.append(token)
-            i += 1
-        else:
-            operand_stack.append(parse_number(token))
-            i += 1
-    while operator_stack:
-        apply_operator(operand_stack, operator_stack)
-    return operand_stack[0]
-
-def precedence(op):
-    if op in '+-':
-        return 1
-    elif op in '*/':
-        return 2
-    return 0
+    return parse_expression(tokens)

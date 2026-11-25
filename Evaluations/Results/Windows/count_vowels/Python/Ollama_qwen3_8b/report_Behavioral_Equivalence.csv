@@ -64,6 +64,11 @@ Ollama_qwen3_8b_2.py,sky,0,0,PASS
 Ollama_qwen3_8b_2.py,AEIOU,5,5,PASS
 Ollama_qwen3_8b_2.py,Alphabet,3,3,PASS
 Ollama_qwen3_8b_2.py,Deterministic,5,5,PASS
+Ollama_qwen3_8b_20.py,hello,2,2,PASS
+Ollama_qwen3_8b_20.py,sky,0,0,PASS
+Ollama_qwen3_8b_20.py,AEIOU,5,5,PASS
+Ollama_qwen3_8b_20.py,Alphabet,3,3,PASS
+Ollama_qwen3_8b_20.py,Deterministic,5,5,PASS
 Ollama_qwen3_8b_3.py,hello,2,2,PASS
 Ollama_qwen3_8b_3.py,sky,0,0,PASS
 Ollama_qwen3_8b_3.py,AEIOU,5,5,PASS

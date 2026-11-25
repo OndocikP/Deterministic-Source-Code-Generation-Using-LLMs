@@ -64,6 +64,11 @@ Gemini_gemini-3_1-flash-lite_2.py,1900,False,False,PASS
 Gemini_gemini-3_1-flash-lite_2.py,2024,True,True,PASS
 Gemini_gemini-3_1-flash-lite_2.py,2023,False,False,PASS
 Gemini_gemini-3_1-flash-lite_2.py,2400,True,True,PASS
+Gemini_gemini-3_1-flash-lite_20.py,2000,True,True,PASS
+Gemini_gemini-3_1-flash-lite_20.py,1900,False,False,PASS
+Gemini_gemini-3_1-flash-lite_20.py,2024,True,True,PASS
+Gemini_gemini-3_1-flash-lite_20.py,2023,False,False,PASS
+Gemini_gemini-3_1-flash-lite_20.py,2400,True,True,PASS
 Gemini_gemini-3_1-flash-lite_3.py,2000,True,True,PASS
 Gemini_gemini-3_1-flash-lite_3.py,1900,False,False,PASS
 Gemini_gemini-3_1-flash-lite_3.py,2024,True,True,PASS

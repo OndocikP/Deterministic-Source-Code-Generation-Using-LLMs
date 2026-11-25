@@ -1,101 +1,106 @@
 File_name,question,Expect,Get,Test
-Ollama_codellama_7b-instruct_0.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_0.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_0.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_0.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_0.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_1.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_1.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_1.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_1.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_1.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_10.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_10.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_10.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_10.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_10.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_11.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_11.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_11.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_11.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_11.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_12.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_12.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_12.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_12.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_12.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_13.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_13.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_13.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_13.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_13.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_14.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_14.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_14.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_14.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_14.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_15.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_15.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_15.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_15.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_15.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_16.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_16.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_16.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_16.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_16.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_17.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_17.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_17.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_17.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_17.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_18.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_18.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_18.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_18.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_18.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_19.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_19.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_19.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_19.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_19.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_2.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_2.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_2.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_2.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_2.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_3.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_3.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_3.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_3.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_3.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_4.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_4.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_4.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_4.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_4.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_5.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_5.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_5.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_5.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_5.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_6.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_6.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_6.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_6.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_6.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_7.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_7.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_7.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_7.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_7.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_8.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_8.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_8.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_8.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_8.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_9.py,5,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_9.py,0,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_9.py,-2,False,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_9.py,3.14,True,NameError: name 'Union' is not defined,FAIL
-Ollama_codellama_7b-instruct_9.py,-0.1,False,NameError: name 'Union' is not defined,FAIL
+Ollama_codellama_7b-instruct_0.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_0.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_0.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_0.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_0.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_1.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_1.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_1.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_1.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_1.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_10.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_10.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_10.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_10.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_10.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_11.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_11.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_11.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_11.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_11.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_12.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_12.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_12.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_12.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_12.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_13.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_13.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_13.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_13.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_13.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_14.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_14.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_14.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_14.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_14.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_15.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_15.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_15.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_15.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_15.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_16.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_16.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_16.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_16.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_16.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_17.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_17.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_17.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_17.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_17.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_18.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_18.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_18.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_18.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_18.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_19.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_19.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_19.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_19.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_19.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_2.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_2.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_2.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_2.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_2.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_20.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_20.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_20.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_20.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_20.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_3.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_3.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_3.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_3.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_3.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_4.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_4.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_4.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_4.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_4.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_5.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_5.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_5.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_5.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_5.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_6.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_6.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_6.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_6.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_6.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_7.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_7.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_7.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_7.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_7.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_8.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_8.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_8.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_8.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_8.py,-0.1,False,False,PASS
+Ollama_codellama_7b-instruct_9.py,5,True,True,PASS
+Ollama_codellama_7b-instruct_9.py,0,False,False,PASS
+Ollama_codellama_7b-instruct_9.py,-2,False,False,PASS
+Ollama_codellama_7b-instruct_9.py,3.14,True,True,PASS
+Ollama_codellama_7b-instruct_9.py,-0.1,False,False,PASS

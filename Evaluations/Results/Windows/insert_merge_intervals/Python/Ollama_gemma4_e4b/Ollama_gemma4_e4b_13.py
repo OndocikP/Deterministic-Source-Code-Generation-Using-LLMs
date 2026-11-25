@@ -11,14 +11,15 @@ def insert_and_merge(intervals: list[list[int]], new_interval: list[int]) -> lis
 
     # 2. Merge overlapping intervals
     while i < n and intervals[i][0] <= new_end:
+        # Update the start and end of the merged interval
         new_start = min(new_start, intervals[i][0])
         new_end = max(new_end, intervals[i][1])
         i += 1
 
-    # 3. Add the merged interval
+    # Add the merged interval
     result.append([new_start, new_end])
 
-    # 4. Add all remaining intervals that come after the merged interval
+    # 3. Add all remaining intervals that come after the merged interval
     while i < n:
         result.append(intervals[i])
         i += 1

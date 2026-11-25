@@ -1,71 +1,57 @@
 def calculate(string):
-    def parse_expression(s):
+    def parse_number(s):
+        if '.' in s:
+            return float(s)
+        return int(s)
+
+    def tokenize(s):
         s = s.replace(' ', '')
         tokens = []
         i = 0
         while i < len(s):
-            if s[i] in '+-*/()':
-                tokens.append(s[i])
-                i += 1
-            elif s[i].isdigit() or s[i] == '.':
+            if s[i].isdigit() or s[i] == '.':
                 j = i
                 while j < len(s) and (s[j].isdigit() or s[j] == '.'):
                     j += 1
-                tokens.append(s[i:j])
+                tokens.append(('NUMBER', parse_number(s[i:j])))
                 i = j
+            elif s[i] in '+-*/()':
+                tokens.append(('OPERATOR', s[i]))
+                i += 1
             else:
                 raise ValueError("Invalid character in expression")
         return tokens
 
-    def evaluate(tokens):
-        def parse_number(token):
-            if '.' in token:
-                return float(token)
-            else:
-                return int(token)
-
-        def parse_factor(tokens):
-            if tokens[0] == '(':
-                tokens.pop(0)
-                result = parse_expression(tokens)
-                if tokens and tokens[0] == ')':
-                    tokens.pop(0)
-                return result
-            else:
-                return parse_number(tokens.pop(0))
-
+    def parse_expression(tokens):
         def parse_term(tokens):
             left = parse_factor(tokens)
-            while tokens and tokens[0] in '*/':
-                op = tokens.pop(0)
+            while tokens and tokens[0][0] == 'OPERATOR' and tokens[0][1] in '*/':
+                op, token = tokens.pop(0)
                 right = parse_factor(tokens)
                 if op == '*':
-                    left *= right
+                    left = left * right
                 elif op == '/':
                     if right == 0:
                         raise ZeroDivisionError("Division by zero")
-                    left /= right
+                    left = left / right
             return left
 
-        def parse_expression(tokens):
-            left = parse_term(tokens)
-            while tokens and tokens[0] in '+-':
-                op = tokens.pop(0)
-                right = parse_term(tokens)
-                if op == '+':
-                    left += right
-                elif op == '-':
-                    left -= right
-            return left
+        def parse_factor(tokens):
+            if tokens[0][0] == 'NUMBER':
+                return tokens.pop(0)[1]
+            elif tokens[0][0] == 'OPERATOR' and tokens[0][1] == '(':
+                tokens.pop(0)
+                result = parse_expression(tokens)
+                if tokens and tokens[0][0] == 'OPERATOR' and tokens[0][1] == ')':
+                    tokens.pop(0)
+                return result
+            else:
+                raise ValueError("Invalid expression")
 
-        tokens = parse_expression(tokens)
-        return tokens
+        return parse_term(tokens)
 
-    try:
-        tokens = parse_expression(string)
-        result = evaluate(tokens)
-        return float(result)
-    except ZeroDivisionError as e:
-        raise e
-    except Exception as e:
-        raise ValueError("Invalid expression") from e
+    tokens = tokenize(string)
+    result = parse_expression(tokens)
+    if tokens:
+        raise ValueError("Incomplete expression")
+    return float(result)

@@ -64,6 +64,11 @@ Ollama_qwen2_5-coder_14b_2.py,0,False,False,PASS
 Ollama_qwen2_5-coder_14b_2.py,-2,False,False,PASS
 Ollama_qwen2_5-coder_14b_2.py,3.14,True,True,PASS
 Ollama_qwen2_5-coder_14b_2.py,-0.1,False,False,PASS
+Ollama_qwen2_5-coder_14b_20.py,5,True,True,PASS
+Ollama_qwen2_5-coder_14b_20.py,0,False,False,PASS
+Ollama_qwen2_5-coder_14b_20.py,-2,False,False,PASS
+Ollama_qwen2_5-coder_14b_20.py,3.14,True,True,PASS
+Ollama_qwen2_5-coder_14b_20.py,-0.1,False,False,PASS
 Ollama_qwen2_5-coder_14b_3.py,5,True,True,PASS
 Ollama_qwen2_5-coder_14b_3.py,0,False,False,PASS
 Ollama_qwen2_5-coder_14b_3.py,-2,False,False,PASS

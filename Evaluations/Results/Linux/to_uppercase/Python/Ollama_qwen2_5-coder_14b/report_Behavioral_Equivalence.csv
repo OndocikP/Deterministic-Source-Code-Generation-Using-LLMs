@@ -1,6 +1,0 @@
-File_name,question,Expect,Get,Test
-Ollama_qwen2_5-coder_14b_0.py,hello,'HELLO','HELLO',PASS
-Ollama_qwen2_5-coder_14b_0.py,PyThOn,'PYTHON','PYTHON',PASS
-Ollama_qwen2_5-coder_14b_0.py,abc123,'ABC123','ABC123',PASS
-Ollama_qwen2_5-coder_14b_0.py,slovensko,'SLOVENSKO','SLOVENSKO',PASS
-Ollama_qwen2_5-coder_14b_0.py,chat gpt,'CHAT GPT','CHAT GPT',PASS

@@ -1,6 +1,0 @@
-File_name,question,Expect,Get,Test
-Ollama_codellama_7b-instruct_0.py,hello,'HELLO','HELLO',PASS
-Ollama_codellama_7b-instruct_0.py,PyThOn,'PYTHON','PYTHON',PASS
-Ollama_codellama_7b-instruct_0.py,abc123,'ABC123','ABC123',PASS
-Ollama_codellama_7b-instruct_0.py,slovensko,'SLOVENSKO','SLOVENSKO',PASS
-Ollama_codellama_7b-instruct_0.py,chat gpt,'CHAT GPT','CHAT GPT',PASS

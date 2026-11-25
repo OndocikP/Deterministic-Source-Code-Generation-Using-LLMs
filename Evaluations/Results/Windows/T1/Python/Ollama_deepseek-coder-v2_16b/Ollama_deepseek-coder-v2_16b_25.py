@@ -15,64 +15,31 @@ def calcute(expression):
                     if open_count == 0:
                         close_idx = i
                         break
-            inner_expr = expr[1:close_idx]
-            expr = expr[:expr.index('(')] + str(parse_expression(inner_expr)) + expr[close_idx+1:]
-        
-        values = []
-        operators = []
-        i = 0
-        while i < len(expr):
-            if expr[i].isdigit() or expr[i] == '.':
-                j = i
-                while j < len(expr) and (expr[j].isdigit() or expr[j] == '.'):
-                    j += 1
-                values.append(float(expr[i:j]))
-                i = j
-            elif expr[i] in '+-':
-                while operators and operators[-1] in '+-':
-                    op = operators.pop()
-                    val2 = values.pop()
-                    val1 = values.pop()
-                    if op == '+':
-                        values.append(val1 + val2)
-                    elif op == '-':
-                        values.append(val1 - val2)
-                operators.append(expr[i])
-                i += 1
-            elif expr[i] in '*/':
-                while operators and operators[-1] in '*/':
-                    op = operators.pop()
-                    val2 = values.pop()
-                    val1 = values.pop()
-                    if op == '*':
-                        values.append(val1 * val2)
-                    elif op == '/':
-                        if val2 == 0:
-                            raise ValueError("Division by zero")
-                        values.append(val1 / val2)
-                operators.append(expr[i])
-                i += 1
-            else:
-                i += 1
-        
-        while operators:
-            op = operators.pop()
-            val2 = values.pop()
-            val1 = values.pop()
-            if op == '+':
-                values.append(val1 + val2)
-            elif op == '-':
-                values.append(val1 - val2)
-            elif op == '*':
-                values.append(val1 * val2)
-            elif op == '/':
-                if val2 == 0:
+            inner_expr = expr[expr.find('(') + 1:close_idx]
+            expr = expr.replace(f'({inner_expr})', str(parse_expression(inner_expr)))
+        tokens = re.findall(r'\d+\.\d+|\d+|[+\-*/]', expr)
+        stack = []
+        for token in tokens:
+            if token.isdigit() or '.' in token:
+                stack.append(float(token))
+            elif token == '+':
+                stack.append(stack.pop() + stack.pop())
+            elif token == '-':
+                stack.append(-(stack.pop() - stack.pop()))
+            elif token == '*':
+                stack.append(stack.pop() * stack.pop())
+            elif token == '/':
+                b = stack.pop()
+                a = stack.pop()
+                if b == 0:
                     raise ValueError("Division by zero")
-                values.append(val1 / val2)
-        
-        return values[0]
+                stack.append(a / b)
+        return stack[0]
     
-    return parse_expression(expression)
+    try:
+        return parse_expression(expression)
+    except Exception as e:
+        raise ValueError(f"Invalid expression: {e}")
 
 # Example usage:
 # print(calcute("2 + 3 * 4"))  # Output: 14.0

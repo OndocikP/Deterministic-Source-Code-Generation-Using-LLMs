@@ -1,27 +1,24 @@
 def evaluate_expression(expression: str) -> float:
-    # Initialize the result to 0
-    result = 0
+    # Initialize a stack to store the operators and operands
+    stack = []
 
-    # Iterate through the characters in the expression
+    # Iterate through the expression string
     for char in expression:
-        # If the character is a number, add it to the result
+        # If the character is a number, append it to the stack
         if char.isdigit():
-            result = result * 10 + int(char)
-        # If the character is an operator, perform the operation and update the result
+            stack.append(char)
+        # If the character is an operator, pop the top two operands from the stack, perform the operation, and push the result back
         elif char in "+-*/":
-            if char == "+":
-                result += result
-            elif char == "-":
-                result -= result
-            elif char == "*":
-                result *= result
-            elif char == "/":
-                result /= result
-        # If the character is a parenthesis, handle it appropriately
+            op2 = float(stack.pop())
+            op1 = float(stack.pop())
+            result = eval(f"{op1} {char} {op2}")
+            stack.append(result)
+        # If the character is a left parenthesis, push it to the stack
         elif char == "(":
-            result = evaluate_expression(expression[expression.index(char) + 1: expression.index(char) + 1])
-        # If the character is a decimal point, handle it appropriately
-        elif char == ".":
-            result = result * 10 + int(char)
+            stack.append(char)
+        # If the character is a right parenthesis, pop the top operand from the stack and discard it
+        elif char == ")":
+            stack.pop()
 
-    return result
+    # Return the final result
+    return float(stack.pop())

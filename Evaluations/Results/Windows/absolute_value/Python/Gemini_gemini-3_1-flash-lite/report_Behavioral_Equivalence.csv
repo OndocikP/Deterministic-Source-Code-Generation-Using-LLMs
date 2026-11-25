@@ -64,6 +64,11 @@ Gemini_gemini-3_1-flash-lite_2.py,-5,5,5,PASS
 Gemini_gemini-3_1-flash-lite_2.py,0,0,0,PASS
 Gemini_gemini-3_1-flash-lite_2.py,-2.5,2.5,2.5,PASS
 Gemini_gemini-3_1-flash-lite_2.py,3.1,3.1,3.1,PASS
+Gemini_gemini-3_1-flash-lite_20.py,5,5,5,PASS
+Gemini_gemini-3_1-flash-lite_20.py,-5,5,5,PASS
+Gemini_gemini-3_1-flash-lite_20.py,0,0,0,PASS
+Gemini_gemini-3_1-flash-lite_20.py,-2.5,2.5,2.5,PASS
+Gemini_gemini-3_1-flash-lite_20.py,3.1,3.1,3.1,PASS
 Gemini_gemini-3_1-flash-lite_3.py,5,5,5,PASS
 Gemini_gemini-3_1-flash-lite_3.py,-5,5,5,PASS
 Gemini_gemini-3_1-flash-lite_3.py,0,0,0,PASS

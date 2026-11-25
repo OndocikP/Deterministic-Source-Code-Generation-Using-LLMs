@@ -144,7 +144,10 @@ def generate_code_from_llm_model(promp, setup, folder_path):
             if code is None:
                 continue
 
-            LLM[model]["num_generated"] = fm.save_code_to_file(folder_path, model, code, setup.get('language', None))
+            saved_index = fm.save_code_to_file(
+                folder_path, model, code, setup.get('language', None)
+            )
+            LLM[model]["num_generated"] = saved_index + 1
             any_model_processed = True
             int_change = True
         

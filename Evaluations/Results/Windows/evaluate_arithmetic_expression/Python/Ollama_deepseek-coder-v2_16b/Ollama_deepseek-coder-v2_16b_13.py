@@ -19,13 +19,6 @@ def evaluate_expression(expression: str) -> float:
         elif op == '/':
             vals.append(val1 / val2)
 
-    def is_number(s):
-        try:
-            float(s)
-            return True
-        except ValueError:
-            return False
-
     vals = []
     ops = []
     i = 0
@@ -33,29 +26,32 @@ def evaluate_expression(expression: str) -> float:
         if expression[i] == ' ':
             i += 1
             continue
-        if is_number(expression[i]):
+        elif expression[i].isdigit() or expression[i] == '.':
             num = 0
-            while i < len(expression) and (expression[i] == '.' or expression[i].isdigit()):
+            while i < len(expression) and (expression[i].isdigit() or expression[i] == '.'):
                 if expression[i] == '.':
-                    num = num * 10 + float(expression[i])
+                    if i + 1 < len(expression) and expression[i + 1].isdigit():
+                        i += 1
+                        num = num * 10 + int(expression[i])
+                    else:
+                        break
                 else:
                     num = num * 10 + int(expression[i])
                 i += 1
             vals.append(num)
-            i -= 1
         elif expression[i] == '(':
             ops.append(expression[i])
+            i += 1
         elif expression[i] == ')':
             while len(ops) > 0 and ops[-1] != '(':
                 apply_op(vals, ops)
             ops.pop()
+            i += 1
         elif expression[i] == '+' or expression[i] == '-' or expression[i] == '*' or expression[i] == '/':
             while len(ops) > 0 and precedence(ops[-1]) >= precedence(expression[i]):
                 apply_op(vals, ops)
             ops.append(expression[i])
-        i += 1
-
+            i += 1
     while len(ops) > 0:
         apply_op(vals, ops)
-
     return vals[0]

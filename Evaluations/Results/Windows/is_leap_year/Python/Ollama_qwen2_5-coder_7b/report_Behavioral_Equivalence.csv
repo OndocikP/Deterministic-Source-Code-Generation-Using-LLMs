@@ -64,6 +64,11 @@ Ollama_qwen2_5-coder_7b_2.py,1900,False,False,PASS
 Ollama_qwen2_5-coder_7b_2.py,2024,True,True,PASS
 Ollama_qwen2_5-coder_7b_2.py,2023,False,False,PASS
 Ollama_qwen2_5-coder_7b_2.py,2400,True,True,PASS
+Ollama_qwen2_5-coder_7b_20.py,2000,True,True,PASS
+Ollama_qwen2_5-coder_7b_20.py,1900,False,False,PASS
+Ollama_qwen2_5-coder_7b_20.py,2024,True,True,PASS
+Ollama_qwen2_5-coder_7b_20.py,2023,False,False,PASS
+Ollama_qwen2_5-coder_7b_20.py,2400,True,True,PASS
 Ollama_qwen2_5-coder_7b_3.py,2000,True,True,PASS
 Ollama_qwen2_5-coder_7b_3.py,1900,False,False,PASS
 Ollama_qwen2_5-coder_7b_3.py,2024,True,True,PASS

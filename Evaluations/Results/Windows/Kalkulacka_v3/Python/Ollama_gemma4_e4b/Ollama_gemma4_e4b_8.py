@@ -81,62 +81,65 @@ class Parser:
 
     # Grammar implementation based on precedence:
     # expression -> term { ('+' | '-') term }
+    # term       -> factor { ('*' | '/') factor }
+    # factor     -> NUMBER | '(' expression ')' | (unary_op factor)
+
     def _expression(self):
         node = self._term()
         while self.peek() and self.peek().type in ('+', '-'):
-            op_token = self.consume()
+            op_token = self.peek()
+            self.consume()
             right = self._term()
-            node = BinaryOp(node, op_token.value, right)
+            if op_token.value == '+':
+                node = (node, '+', right)
+            else: # '-'
+                node = (node, '-', right)
         return node
 
-    # term -> factor { ('*' | '/') factor }
     def _term(self):
         node = self._factor()
         while self.peek() and self.peek().type in ('*', '/'):
-            op_token = self.consume()
+            op_token = self.peek()
+            self.consume()
             right = self._factor()
-            node = BinaryOp(node, op_token.value, right)
+            if op_token.value == '*':
+                node = (node, '*', right)
+            else: # '/'
+                node = (node, '/', right)
         return node
 
-    # factor -> NUMBER | '(' expression ')' | '-' factor | '+' factor
     def _factor(self):
         token = self.peek()
         if token is None:
             raise SyntaxError("Unexpected end of expression while expecting factor")
 
-        if token.type == 'NUMBER':
-            self.consume()
-            return Literal(token.value)
-        elif token.value == '(':
+        # Handle Unary Operators (+ or -)
+        if token.type in ('+', '-') and (self.pos == 0 or self.tokens[self.pos-1].type in ('(', '+', '-', '*', '/')):
+            op_token = self.consume()
+            # Unary operator applies to the next factor
+            right = self._factor()
+            if op_token.value == '+':
+                return (op_token.value, right)
+            else: # '-'
+                return (op_token.value, right)
+
+        # Handle Parentheses
+        if token.type == '(':
             self.consume('(')
             node = self._expression()
             self.consume(')')
             return node
-        elif token.value in ('+', '-'):
-            op_token = self.consume()
-            # Handle unary plus/minus
-            right = self._factor()
-            if op_token.value == '-':
-                return UnaryOp(op_token.value, right)
-            elif op_token.value == '+':
-                return right # Unary plus is identity
-            else:
-                # This case should not be reached if logic is correct, but for safety:
-                raise SyntaxError("Invalid unary operator")
-        else:
-            raise SyntaxError(f"Unexpected token in factor: {token}")
 
-class Literal:
-    def __init__(self, value):
-        self.value = value
-    def evaluate(self):
-        return self.value
+        # Handle Numbers
+        if token.type == 'NUMBER':
+            self.consume()
+            return token.value
 
-class BinaryOp:
-    def __init__(self, left, op, right):
-        self.left = left
-        self.op = op
-        self.right = right
-    def evaluate(self):
-        left_val = self.left.evaluate()
-        right_val = self.right.evaluate()
+        raise SyntaxError(f"Unexpected token in factor: {token}")
+
+def evaluate_node(node):
+    if isinstance(node, (int, float)):
+        return float(node)
+
+    op = node[1]
+    left = evaluate_node(

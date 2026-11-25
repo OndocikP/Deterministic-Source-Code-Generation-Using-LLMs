@@ -5,7 +5,7 @@ def normalize_path(path: str) -> str:
     components = []
     current_path = ""
     
-    # Split by '/', filtering out empty strings resulting from multiple slashes
+    # Split by '/' and filter out empty strings resulting from multiple slashes
     parts = [part for part in path.split('/') if part]
 
     for part in parts:

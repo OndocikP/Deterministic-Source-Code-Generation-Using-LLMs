@@ -6,7 +6,7 @@ def to_uppercase(value: str) -> str:
         value (str): The input string to be converted to uppercase.
     
     Returns:
-        str: The uppercase version of the input string, or an empty string if the input is not a string.
+        str: The input string converted to uppercase if it is a string, otherwise an empty string.
     """
     if not isinstance(value, str):
         return ""

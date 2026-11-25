@@ -1,5 +1,8 @@
-def to_uppercase(value: str | None) -> str:
-    """Convert the input string to uppercase. Return empty string if input is not a string."""
+def to_uppercase(value: str) -> str:
+    """
+    Convert the input string to uppercase.
+    If input is not a string, return an empty string.
+    """
     if not isinstance(value, str):
         return ""
     return value.upper()

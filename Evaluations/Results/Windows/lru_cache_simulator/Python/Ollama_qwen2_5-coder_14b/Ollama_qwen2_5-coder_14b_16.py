@@ -14,7 +14,7 @@ class LRUCache:
     def put(self, key: int, value: int) -> None:
         if key in self.cache:
             self.order.remove(key)
-        elif len(self.cache) >= self.capacity:
+        elif len(self.cache) == self.capacity:
             oldest_key = self.order.pop(0)
             del self.cache[oldest_key]
         self.cache[key] = value

@@ -2,7 +2,9 @@ import os
 import sys
 from pathlib import Path
 
-
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 import Experiment_Framework.funcion.report_manager as rm
 import Experiment_Framework.funcion.file_manager as fm
@@ -63,47 +65,55 @@ def os_task_folder(folder_os_task, tests_data):
 
 
 
-def main(zmena):
-    for folder_os in fm.open_folder_return_folders(os.path.join(Evaluation_folder, "Results")):
-        print(Path(folder_os).name)
-        zmenav_os = False
-        for folder_task in fm.open_folder_return_folders(os.path.join(Evaluation_folder, "Prompts")):
-            print("  " + Path(folder_task).name)
+def main():
+    any_changes = True
+    iteration = 0
+    max_iterations = 3
+    
+    while any_changes and iteration < max_iterations:
+        iteration += 1
+        print(f"\n--- Iteration {iteration} ---")
+        any_changes = False
+        
+        for folder_os in fm.open_folder_return_folders(os.path.join(Evaluation_folder, "Results")):
+            print(Path(folder_os).name)
+            zmenav_os = False
+            for folder_task in fm.open_folder_return_folders(os.path.join(Evaluation_folder, "Prompts")):
+                print("  " + Path(folder_task).name)
 
-            file_path = Path(folder_task) / "tests_data.txt"
-                    
-            if not file_path.is_file():
-                print(f"\033[93m'tests_data.txt' not found in {folder_task}\033[0m")
-                continue
-            tests_data = fm.load_setup(os.path.join(folder_task, "tests_data.txt"))
+                file_path = Path(folder_task) / "tests_data.txt"
+                        
+                if not file_path.is_file():
+                    print(f"\033[93m'tests_data.txt' not found in {folder_task}\033[0m")
+                    continue
+                tests_data = fm.load_setup(os.path.join(folder_task, "tests_data.txt"))
 
-            #print(tests_data)
-            if not tests_data:
-                print(f"\033[93mNo tests data found in {folder_task}\033[0m")
-                continue
+                #print(tests_data)
+                if not tests_data:
+                    print(f"\033[93mNo tests data found in {folder_task}\033[0m")
+                    continue
 
-            if not (Path(folder_os) / Path(folder_task).name).exists():
-                print(f"\033[93mFolder not found: {Path(folder_os) / Path(folder_task).name}\033[0m")
-                continue
+                if not (Path(folder_os) / Path(folder_task).name).exists():
+                    print(f"\033[93mFolder not found: {Path(folder_os) / Path(folder_task).name}\033[0m")
+                    continue
 
-            print("test")
-            zmenav_os = zmenav_os or os_task_folder(Path(folder_os) / Path(folder_task).name,tests_data)
-            print(f"Changes detected: {zmenav_os}")
-            #break#XXX
+                print("test")
+                zmenav_os = zmenav_os or os_task_folder(Path(folder_os) / Path(folder_task).name,tests_data)
+                print(f"Changes detected: {zmenav_os}")
 
-
+            # Only regenerate reports if changes were detected
             if zmenav_os:
-                main(zmenav_os)
-                return
+                rm.create_avg_report_from_chyldren_folders(folder_os)
+                any_changes = True
 
-        if zmenav_os or rm.get_report(folder_os) is None:
-            rm.create_avg_report_from_chyldren_folders(folder_os)
-
-        #break#XXX
-    if zmenav_os or rm.get_report(os.path.join(Evaluation_folder, "Results")) is None:
-        rm.create_avg_report_from_chyldren_folders(os.path.join(Evaluation_folder, "Results"))
+            if any_changes:
+                rm.create_avg_report_from_chyldren_folders(os.path.join(Evaluation_folder, "Results"))
+    
+    # Final report generation
+    print("\nGenerating final reports...")
+    rm.create_avg_report_from_chyldren_folders(os.path.join(Evaluation_folder, "Results"))
 
 
 
 if __name__ == "__main__":
-    main(False)
+    main()

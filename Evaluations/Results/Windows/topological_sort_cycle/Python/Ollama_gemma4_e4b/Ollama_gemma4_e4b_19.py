@@ -19,48 +19,19 @@ def topological_order(graph: dict[str, list[str]]) -> list[str] | None:
     topological_order_list = []
     
     while queue:
-        current_node = queue.pop(0)
-        topological_order_list.append(current_node)
+        # Lexicographically smallest node is already at the front because we use a sorted list/queue
+        # and only add new zero in-degree nodes in sorted order.
+        u = queue.pop(0)
+        topological_order_list.append(u)
         
-        if current_node in graph:
-            neighbors = sorted(graph[current_node])
-            for neighbor in neighbors:
-                in_degree[neighbor] -= 1
-                if in_degree[neighbor] == 0:
-                    # Maintain lexicographical order for next additions to the queue
-                    # Since we are using a list as a queue and need lexicographical order,
-                    # we must ensure that when multiple nodes become ready, we process the smallest one first.
-                    # A standard queue (FIFO) won't guarantee this if we just append.
-                    # We will collect all ready nodes and sort them before appending/processing.
-                    pass # We handle sorting implicitly by how we manage the queue/next candidates
-
-    # Re-implementing the queue management to strictly adhere to lexicographical smallest first
-    
-    in_degree = {node: 0 for node in nodes}
-    for node in graph:
-        for neighbor in graph[node]:
-            in_degree[neighbor] += 1
-
-    # Use a min-heap or a sorted list to simulate the priority queue (lexicographically smallest first)
-    import heapq
-    pq = []
-    for node in nodes:
-        if in_degree[node] == 0:
-            heapq.heappush(pq, node)
-
-    topological_order_list = []
-    
-    while pq:
-        current_node = heapq.heappop(pq)
-        topological_order_list.append(current_node)
-        
-        if current_node in graph:
-            # Process neighbors in lexicographical order to ensure deterministic behavior 
-            # if multiple neighbors become ready simultaneously (though the heap handles the selection)
-            for neighbor in sorted(graph[current_node]):
-                in_degree[neighbor] -= 1
-                if in_degree[neighbor] == 0:
-                    heapq.heappush(pq, neighbor)
+        if u in graph:
+            for v in graph[u]:
+                in_degree[v] -= 1
+                if in_degree[v] == 0:
+                    # Insert new zero in-degree nodes while maintaining lexicographical order
+                    # This simulates a min-heap behavior for the queue
+                    import bisect
+                    bisect.insort(queue, v)
 
     if len(topological_order_list) != len(nodes):
         return None

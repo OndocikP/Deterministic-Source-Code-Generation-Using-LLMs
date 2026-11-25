@@ -20,7 +20,8 @@ def knight_min_moves(board_size: int, start: tuple[int, int], end: tuple[int, in
         (current_pos, moves) = queue.popleft()
 
         for dr, dc in knight_moves:
-            next_r, next_c = current_pos[0] + dr, current_pos[1] + dc
+            next_r = current_pos[0] + dr
+            next_c = current_pos[1] + dc
             next_pos = (next_r, next_c)
 
             if 0 <= next_r < board_size and 0 <= next_c < board_size and next_pos not in visited:

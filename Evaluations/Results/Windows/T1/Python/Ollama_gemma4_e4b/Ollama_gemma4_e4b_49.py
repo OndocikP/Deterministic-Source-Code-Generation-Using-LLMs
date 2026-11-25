@@ -47,7 +47,7 @@ def calcute(string):
     ops = []
 
     for token in tokens:
-        if token.replace('.', '', 1).isdigit():
+        if token.replace('.', '', 1).isdigit() or (token.startswith('-') and token[1:].replace('.', '', 1).isdigit()):
             values.append(float(token))
         elif token == '(':
             ops.append(token)

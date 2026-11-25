@@ -17,17 +17,16 @@ def is_valid_email(email: str) -> bool:
     if not email:
         return False
 
-    pattern = re.compile(
-        r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-    )
-
+    pattern = re.compile(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')
     if not pattern.match(email):
         return False
 
     local_part, domain = email.split('@', 1)
-    if '.' in local_part:
-        if local_part.startswith('.') or local_part.endswith('.'):
-            return False
+    if not local_part or not domain:
+        return False
+
+    if re.search(r'\.\.', local_part):
+        return False
 
     domain_labels = domain.split('.')
     for label in domain_labels:

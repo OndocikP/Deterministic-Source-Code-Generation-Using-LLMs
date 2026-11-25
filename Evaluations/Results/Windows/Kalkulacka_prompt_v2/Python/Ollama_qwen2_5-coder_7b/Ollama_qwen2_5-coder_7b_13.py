@@ -25,28 +25,24 @@ class Calculator:
                 j = self.find_matching_parenthesis(expression, i)
                 tokens.append(self.evaluate(expression[i+1:j]))
                 i = j + 1
-            elif expression[i].isdigit() or expression[i] == '.':
+            else:
                 j = i
-                while j < len(expression) and (expression[j].isdigit() or expression[j] == '.'):
+                while j < len(expression) and expression[j].isdigit() or expression[j] == '.':
                     j += 1
                 tokens.append(float(expression[i:j]))
                 i = j
-            else:
-                i += 1
         return tokens
 
     def find_matching_parenthesis(self, expression: str, start: int) -> int:
         count = 1
         i = start + 1
-        while i < len(expression):
+        while count > 0:
             if expression[i] == '(':
                 count += 1
             elif expression[i] == ')':
                 count -= 1
-                if count == 0:
-                    return i
             i += 1
-        raise ValueError("Unmatched parenthesis")
+        return i - 1
 
     def parse(self, tokens: list) -> float:
         values = []

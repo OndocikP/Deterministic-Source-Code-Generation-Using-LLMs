@@ -64,6 +64,11 @@ Gemini_gemini-3_1-flash-lite_2.py,sky,0,0,PASS
 Gemini_gemini-3_1-flash-lite_2.py,AEIOU,5,5,PASS
 Gemini_gemini-3_1-flash-lite_2.py,Alphabet,3,3,PASS
 Gemini_gemini-3_1-flash-lite_2.py,Deterministic,5,5,PASS
+Gemini_gemini-3_1-flash-lite_20.py,hello,2,2,PASS
+Gemini_gemini-3_1-flash-lite_20.py,sky,0,0,PASS
+Gemini_gemini-3_1-flash-lite_20.py,AEIOU,5,5,PASS
+Gemini_gemini-3_1-flash-lite_20.py,Alphabet,3,3,PASS
+Gemini_gemini-3_1-flash-lite_20.py,Deterministic,5,5,PASS
 Gemini_gemini-3_1-flash-lite_3.py,hello,2,2,PASS
 Gemini_gemini-3_1-flash-lite_3.py,sky,0,0,PASS
 Gemini_gemini-3_1-flash-lite_3.py,AEIOU,5,5,PASS

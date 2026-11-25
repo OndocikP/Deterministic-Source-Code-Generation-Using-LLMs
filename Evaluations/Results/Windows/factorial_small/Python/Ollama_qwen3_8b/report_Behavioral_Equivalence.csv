@@ -64,6 +64,11 @@ Ollama_qwen3_8b_2.py,1,1,1,PASS
 Ollama_qwen3_8b_2.py,3,6,6,PASS
 Ollama_qwen3_8b_2.py,5,120,120,PASS
 Ollama_qwen3_8b_2.py,10,3628800,3628800,PASS
+Ollama_qwen3_8b_20.py,0,1,1,PASS
+Ollama_qwen3_8b_20.py,1,1,1,PASS
+Ollama_qwen3_8b_20.py,3,6,6,PASS
+Ollama_qwen3_8b_20.py,5,120,120,PASS
+Ollama_qwen3_8b_20.py,10,3628800,3628800,PASS
 Ollama_qwen3_8b_3.py,0,1,1,PASS
 Ollama_qwen3_8b_3.py,1,1,1,PASS
 Ollama_qwen3_8b_3.py,3,6,6,PASS

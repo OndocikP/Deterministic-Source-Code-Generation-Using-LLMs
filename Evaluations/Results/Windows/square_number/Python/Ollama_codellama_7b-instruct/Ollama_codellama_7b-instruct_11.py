@@ -1,4 +1,4 @@
-def square_number(value: Union[int, float]) -> Optional[float]:
+def square_number(value: Union[int, float]) -> Optional[Union[int, float]]:
     """
     Returns the square of the input number.
     """

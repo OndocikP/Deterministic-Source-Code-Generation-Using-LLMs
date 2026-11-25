@@ -123,14 +123,30 @@ def _load_function(code_file, function_name):
     if source is None:
         raise ValueError(f"Could not read code file: {code_file}")
 
+    # Inject common typing imports that might be missing
     namespace = {
         "__file__": str(code_file),
         "__name__": "__generated_code__",
+        # Common typing imports
+        "Union": __import__("typing").Union,
+        "Optional": __import__("typing").Optional,
+        "List": __import__("typing").List,
+        "Dict": __import__("typing").Dict,
+        "Tuple": __import__("typing").Tuple,
+        "Set": __import__("typing").Set,
+        "Any": __import__("typing").Any,
+        "Callable": __import__("typing").Callable,
+        "Type": __import__("typing").Type,
     }
     with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(
         io.StringIO()
     ):
-        exec(compile(source, str(code_file), "exec"), namespace)
+        try:
+            exec(compile(source, str(code_file), "exec"), namespace)
+        except SyntaxError:
+            raise
+        except Exception as e:
+            raise ValueError(f"Error executing code: {e}")
 
     function = namespace.get(function_name)
     if not callable(function):
@@ -192,6 +208,14 @@ def Behavioral_Equivalence(code_file, tests_data):
                     actual = function(*args)
                 actual_text = _display_value(actual)
                 passed = _results_equal(actual, expected)
+            except TypeError as e:
+                # Handle type annotation errors gracefully
+                if "Union" in str(e) or "Optional" in str(e) or "typing" in str(e):
+                    actual_text = f"TypeError: {e} (type annotation issue)"
+                    passed = False
+                else:
+                    actual_text = f"TypeError: {e}"
+                    passed = False
             except Exception as error:
                 actual_text = f"{type(error).__name__}: {error}"
                 passed = False
@@ -223,10 +247,11 @@ def run_all_tests(folder_path, tests_data):
     code_files = fm.get_codes_files(folder_path)
     for code in code_files:
         print(f"Running test for code file: {Path(code).name}")
-        row = [Path(code).name]
-        row[1:] = [Code_Identity(code, code_files)]
-        row[2:] = [AST_Structure(code, code_files)]
-        row[3:] = [Behavioral_Equivalence(code, tests_data)]
+        code_identity = Code_Identity(code, code_files)
+        ast_structure = AST_Structure(code, code_files)
+        behavioral_equivalence = Behavioral_Equivalence(code, tests_data)
+        
+        row = [Path(code).name, code_identity, ast_structure, behavioral_equivalence]
         print(row)
         rm.write_report(Path(folder_path) / report_files, [row])
 

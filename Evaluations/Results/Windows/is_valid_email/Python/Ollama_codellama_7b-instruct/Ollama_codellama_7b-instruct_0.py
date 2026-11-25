@@ -1,3 +1,4 @@
+```
 def is_valid_email(email: str) -> bool:
     """
     Validates an email address according to the RFC 5322 standard.

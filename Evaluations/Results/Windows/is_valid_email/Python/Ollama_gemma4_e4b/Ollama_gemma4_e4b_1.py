@@ -55,12 +55,14 @@ def is_valid_email(email: any) -> bool:
         if not label.isalnum() and not (label.count('-') == 1 and label.replace('-', '').isalnum()):
             # Basic check: labels should primarily be alphanumeric or contain one hyphen internally
             # This is a simplification of RFC rules but covers the specified constraints.
-            # We must ensure no spaces or control characters are present in labels.
-            if any(c in ' ' for c in label) or any(ord(c) < 32 and ord(c) != 9 for c in label) or 127 in label:
-                return False
-            
-            # A stricter check for allowed characters in domain labels (alphanumeric and hyphen)
+            # We ensure no spaces or control characters are present in labels implicitly by checking the whole string,
+            # but we must ensure labels only contain valid characters.
             if not all(c.isalnum() or c == '-' for c in label):
                 return False
+
+    # Final check for domain labels containing only hyphens or being empty (already partially covered)
+    for label in domain_labels:
+        if label.isspace() or not label:
+            return False
 
     return True

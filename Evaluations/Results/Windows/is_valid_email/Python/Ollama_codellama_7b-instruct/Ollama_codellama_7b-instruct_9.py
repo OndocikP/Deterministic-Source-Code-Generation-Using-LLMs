@@ -1,3 +1,4 @@
+```
 def is_valid_email(email: str) -> bool:
     """
     Validates an email address according to the RFC 5322 standard.
@@ -14,19 +15,582 @@ def is_valid_email(email: str) -> bool:
         return False
     if "@" not in email:
         return False
-    local_part, domain = email.split("@")
-    if not local_part or not domain:
+    if email.startswith(" ") or email.endswith(" "):
         return False
-    if local_part.startswith("."):
+    if email.count(" ") > 0:
         return False
-    if local_part.endswith("."):
+    if email.count("@") > 1:
         return False
-    if domain.startswith("."):
+    if email.count(".") == 0:
         return False
-    if domain.endswith("."):
+    if email.count("..") > 0:
         return False
-    if not domain.replace("-", "").isalnum():
+    if email.count("-") > 0:
         return False
-    if not local_part.replace("-", "").isalnum():
+    if email.count("_") > 0:
         return False
-    return True
+    if email.count("+") > 0:
+        return False
+    if email.count("=") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:
+        return False
+    if email.count("?") > 0:
+        return False
+    if email.count("!") > 0:
+        return False
+    if email.count("%") > 0:
+        return False
+    if email.count("#") > 0:
+        return False
+    if email.count("&") > 0:
+        return False
+    if email.count("$") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:
+        return False
+    if email.count("?") > 0:
+        return False
+    if email.count("!") > 0:
+        return False
+    if email.count("%") > 0:
+        return False
+    if email.count("#") > 0:
+        return False
+    if email.count("&") > 0:
+        return False
+    if email.count("$") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:
+        return False
+    if email.count("?") > 0:
+        return False
+    if email.count("!") > 0:
+        return False
+    if email.count("%") > 0:
+        return False
+    if email.count("#") > 0:
+        return False
+    if email.count("&") > 0:
+        return False
+    if email.count("$") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:
+        return False
+    if email.count("?") > 0:
+        return False
+    if email.count("!") > 0:
+        return False
+    if email.count("%") > 0:
+        return False
+    if email.count("#") > 0:
+        return False
+    if email.count("&") > 0:
+        return False
+    if email.count("$") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:
+        return False
+    if email.count("?") > 0:
+        return False
+    if email.count("!") > 0:
+        return False
+    if email.count("%") > 0:
+        return False
+    if email.count("#") > 0:
+        return False
+    if email.count("&") > 0:
+        return False
+    if email.count("$") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:
+        return False
+    if email.count("?") > 0:
+        return False
+    if email.count("!") > 0:
+        return False
+    if email.count("%") > 0:
+        return False
+    if email.count("#") > 0:
+        return False
+    if email.count("&") > 0:
+        return False
+    if email.count("$") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:
+        return False
+    if email.count("?") > 0:
+        return False
+    if email.count("!") > 0:
+        return False
+    if email.count("%") > 0:
+        return False
+    if email.count("#") > 0:
+        return False
+    if email.count("&") > 0:
+        return False
+    if email.count("$") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:
+        return False
+    if email.count("?") > 0:
+        return False
+    if email.count("!") > 0:
+        return False
+    if email.count("%") > 0:
+        return False
+    if email.count("#") > 0:
+        return False
+    if email.count("&") > 0:
+        return False
+    if email.count("$") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:
+        return False
+    if email.count("?") > 0:
+        return False
+    if email.count("!") > 0:
+        return False
+    if email.count("%") > 0:
+        return False
+    if email.count("#") > 0:
+        return False
+    if email.count("&") > 0:
+        return False
+    if email.count("$") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:
+        return False
+    if email.count("?") > 0:
+        return False
+    if email.count("!") > 0:
+        return False
+    if email.count("%") > 0:
+        return False
+    if email.count("#") > 0:
+        return False
+    if email.count("&") > 0:
+        return False
+    if email.count("$") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:
+        return False
+    if email.count("?") > 0:
+        return False
+    if email.count("!") > 0:
+        return False
+    if email.count("%") > 0:
+        return False
+    if email.count("#") > 0:
+        return False
+    if email.count("&") > 0:
+        return False
+    if email.count("$") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("(") > 0:
+        return False
+    if email.count(")") > 0:
+        return False
+    if email.count("[") > 0:
+        return False
+    if email.count("]") > 0:
+        return False
+    if email.count("{") > 0:
+        return False
+    if email.count("}") > 0:
+        return False
+    if email.count("|") > 0:
+        return False
+    if email.count("\\") > 0:
+        return False
+    if email.count("^") > 0:
+        return False
+    if email.count("~") > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count(";") > 0:
+        return False
+    if email.count(":") > 0:
+        return False
+    if email.count("'") > 0:
+        return False
+    if email.count('"') > 0:
+        return False
+    if email.count("`") > 0:
+        return False
+    if email.count("*") > 0:

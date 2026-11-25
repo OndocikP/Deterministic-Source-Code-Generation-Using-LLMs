@@ -64,6 +64,11 @@ Ollama_deepseek-coder-v2_16b_2.py,3,False,False,PASS
 Ollama_deepseek-coder-v2_16b_2.py,0,True,True,PASS
 Ollama_deepseek-coder-v2_16b_2.py,-4,True,True,PASS
 Ollama_deepseek-coder-v2_16b_2.py,11,False,False,PASS
+Ollama_deepseek-coder-v2_16b_20.py,2,True,True,PASS
+Ollama_deepseek-coder-v2_16b_20.py,3,False,False,PASS
+Ollama_deepseek-coder-v2_16b_20.py,0,True,True,PASS
+Ollama_deepseek-coder-v2_16b_20.py,-4,True,True,PASS
+Ollama_deepseek-coder-v2_16b_20.py,11,False,False,PASS
 Ollama_deepseek-coder-v2_16b_3.py,2,True,True,PASS
 Ollama_deepseek-coder-v2_16b_3.py,3,False,False,PASS
 Ollama_deepseek-coder-v2_16b_3.py,0,True,True,PASS
