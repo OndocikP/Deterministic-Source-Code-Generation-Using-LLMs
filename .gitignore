@@ -20,3 +20,10 @@ Lokal_FrontEnd_Webserver/
 Lokal_Server_V2/
 
 Experiment_Framework/LLM_models/gemini_apikeys.txt
+
+# Evaluations/Results: Ignore ALL CSV files recursively except main and OS-level reports
+/Evaluations/Results/**/*
+!/Evaluations/Results/
+!/Evaluations/Results/*_report.csv
+!/Evaluations/Results/*/
+!/Evaluations/Results/*/*_report.csv
