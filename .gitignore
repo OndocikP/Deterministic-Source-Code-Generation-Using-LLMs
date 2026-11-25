@@ -21,9 +21,9 @@ Lokal_Server_V2/
 
 Experiment_Framework/LLM_models/gemini_apikeys.txt
 
-# Evaluations/Results: Ignore ALL CSV files recursively except main and OS-level reports
+# Evaluations/Results: ignore all generated CSVs, keep only global and OS summary reports
 /Evaluations/Results/**/*
 !/Evaluations/Results/
-!/Evaluations/Results/*_report.csv
+!/Evaluations/Results/Results_report.csv
 !/Evaluations/Results/*/
 !/Evaluations/Results/*/*_report.csv
